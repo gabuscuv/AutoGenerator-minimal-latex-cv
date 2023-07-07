@@ -1,373 +1,128 @@
-%----------------------------------------------------------------------------------------
-%	DOCUMENT DEFINITION
-%----------------------------------------------------------------------------------------
-
-% we use article class because we want to fully customize the page
-\documentclass[10pt,A4]{article}	
-
-
-%----------------------------------------------------------------------------------------
-%	ENCODING
-%----------------------------------------------------------------------------------------
-
-%we use utf8 since we want to build from any machine
-\usepackage[utf8]{inputenc}	
-
-%----------------------------------------------------------------------------------------
-%	LOGIC
-%----------------------------------------------------------------------------------------
-
-\usepackage{xifthen}
-\usepackage{calc}
-\usepackage[hidelinks]{hyperref}
-
-%----------------------------------------------------------------------------------------
-%	FONT
-%----------------------------------------------------------------------------------------
-
-% some tex-live fonts - choose your own
-
-%\usepackage[defaultsans]{droidsans}
-%\usepackage[default]{comfortaa}
-%\usepackage{cmbright}
-\usepackage[default]{raleway}
-%\usepackage{fetamont}
-%\usepackage[default]{gillius}
-%\usepackage[light,math]{iwona}
-%\usepackage[thin]{roboto} 
-
-% set font default
-\renewcommand*\familydefault{\sfdefault} 	
-\usepackage[T1]{fontenc}
-
-% more font size definitions
-\usepackage{moresize}		
-
-% font icons package
-\usepackage{fontawesome}
-
-%----------------------------------------------------------------------------------------
-%	PAGE LAYOUT  DEFINITIONS
-%----------------------------------------------------------------------------------------
-
-%define page styles using geometry
-\usepackage[a4paper]{geometry}		
-
-% for example, change the margins to 2 inches all round
-\geometry{top=2cm, bottom=2cm, left=2cm, right=2cm} 	
-
-% use customized header
-\usepackage{fancyhdr}				
-\pagestyle{fancy}
-
-%less space between header and content
-\setlength{\headheight}{-5pt}		
-
-% customize header entries
-\lhead{}
-\rhead{}
-\chead{}
-
-%indentation is zero
-\setlength{\parindent}{0mm}
-
-%----------------------------------------------------------------------------------------
-%	GRAPHICS DEFINITIONS
-%---------------------------------------------------------------------------------------- 
-
-% for drawing graphics and charts
-\usepackage{tikz}
-\usetikzlibrary{shapes, backgrounds}
-
-% use to vertically center content
-% credits to: http://tex.stackexchange.com/questions/7219/how-to-vertically-center-two-images-next-to-each-other
-\newcommand{\vcenteredinclude}[1]{\begingroup
-	\setbox0=\hbox{\includegraphics{#1}}%
-	\parbox{\wd0}{\box0}\endgroup}
-
-% use to vertically center content
-% credits to: http://tex.stackexchange.com/questions/7219/how-to-vertically-center-two-images-next-to-each-other
-\newcommand*{\vcenteredhbox}[1]{\begingroup
-	\setbox0=\hbox{#1}\parbox{\wd0}{\box0}\endgroup}
-
-%----------------------------------------------------------------------------------------
-%	ICON-SET EMBEDDING
-%---------------------------------------------------------------------------------------- 
-
-% at this point we simplify our icon-embedding by simply referring to a set of png images.
-% if you find a good way of including svg without conflicting with other packages you can
-% replace this part
-\newcommand{\icon}[2]{\colorbox{black}{\makebox(#2, #2){\textcolor{white}{\large\csname fa#1\endcsname}}}}	%icon shortcut
-\newcommand{\icontext}[3]{ 						%icon with text shortcut
-	\vcenteredhbox{\icon{#1}{#2}}\hspace{0.2cm}\vcenteredhbox{\textcolor{black}{#3}}
-}
-
-%----------------------------------------------------------------------------------------
-% 	HEADER
-%----------------------------------------------------------------------------------------
-
-% remove top header line
-\renewcommand{\headrulewidth}{0pt} 
-
-%remove botttom header line
-\renewcommand{\footrulewidth}{0pt}	  	
-
-%remove pagenum
-\renewcommand{\thepage}{}	
-
-%remove section num		
-\renewcommand{\thesection}{}			
-
-
-%----------------------------------------------------------------------------------------
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Developer CV
+% LaTeX Template
+% Version 1.0 (28/1/19)
 %
-% 	TIKZ GRAPHICS
+% This template originates from:
+% http://www.LaTeXTemplates.com
 %
-%----------------------------------------------------------------------------------------
-
-\newcounter{a}
-\newcounter{b}
-\newcounter{c}
-\newcounter{barcount}
-
-%----------------------------------------------------------------------------------------
-% 	BAR CHART
-%----------------------------------------------------------------------------------------
-
-% draw a bar chart
-% param 1: width
-% param 2: height
-% param 3: border color
-% param 4: label text color
-% param 5: label bg color
-% param 6: cat 1 color
-\newenvironment{barchart}[8]{
-	
-	\newcommand{\barwidth}{0.35}
-	\newcommand{\barsep}{0.2}
-	
-	% param 1: overall percent
-	% param 2: label
-	% param 3: cat 1 percent
-	% param 4: cat 2 percent
-	% param 5: cat 3 percent
-	\newcommand{\baritem}[5]{
-		
-		\pgfmathparse{##3+##4+##5}
-		\let\perc\pgfmathresult
-		
-		\pgfmathparse{#2}
-		\let\barsize\pgfmathresult
-		
-		\pgfmathparse{\barsize*##3/100}
-		\let\barone\pgfmathresult
-		
-		\pgfmathparse{\barsize*##4/100}
-		\let\bartwo\pgfmathresult
-		
-		\pgfmathparse{\barsize*##5/100}
-		\let\barthree\pgfmathresult
-		
-		\pgfmathparse{(\barwidth*\thebarcount)+(\barsep*\thebarcount)}
-		\let\barx\pgfmathresult
-		
-		\filldraw[fill=#6, draw=none] (0,-\barx) rectangle (\barone,-\barx-\barwidth);
-		\filldraw[fill=#7, draw=none] (\barone, -\barx) rectangle (\barone+\bartwo,-\barx-\barwidth);
-		\filldraw[fill=#8, draw=none] (\barone+\bartwo,-\barx ) rectangle (\barone+\bartwo+\barthree,-\barx-\barwidth);
-		
-		\node [label=180:\colorbox{#5}{\textcolor{#4}{##2}}] at (0,-\barx-0.175) {};
-		\addtocounter{barcount}{1}
-	}
-	\begin{tikzpicture}
-	\setcounter{barcount}{0}
-	
-}
-{\end{tikzpicture}}
-
-%----------------------------------------------------------------------------------------
-% 	BUBBLE CHART
-%----------------------------------------------------------------------------------------
-\newcommand{\bubble}[5]{
-	\definecolor{tmpcol}{RGB}{50,50,#5}
-	% slice
-	\filldraw[fill=black,draw=none] (#1,0.5) circle (#3);
-	
-	% outer label
-	\node[label=\textcolor{black}{#4}] at (#1,0.7) {};
-}
-
-\newcommand{\bubbles}[2]{
-	%reset counters
-	\setcounter{a}{0}
-	\setcounter{c}{150}
-	\begin{tikzpicture}[scale=3]
-	\foreach \p/\t in {#1} {
-		\addtocounter{a}{1}
-		\bubble{\thea/2}{\theb}{\p/25}{\t}{1\p0}
-	}
-	\end{tikzpicture}
-}
-
-
-%----------------------------------------------------------------------------------------
-%	custom sections
-%----------------------------------------------------------------------------------------
-
-% create a coloured box with arrow and title as cv section headline
-% param 1: section title
+% Authors:
+% Modified by Gabriel Bustillo del Cuvillo (gabibust@gmail.com)
+% Modified for LaTeX Templates by Vel (vel@LaTeXTemplates.com)
+% Original Author: Jan Vorisek (jan@vorisek.me)
+% Based on a template by Jan Küster (info@jankuester.com)
 %
-\newcommand{\cvsection}[1] {
-	\textcolor{white}{\MakeUppercase{\textbf{#1}}}
-}
-
-\newcommand{\cvsect}[1]{
-	\colorbox{black}{{\cvsection{#1}}}\\\\%
-}
+% License:
+% The MIT License (see included LICENSE file)
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %----------------------------------------------------------------------------------------
-% CUSTOM LOREM IPSUM
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
 %----------------------------------------------------------------------------------------
-\newcommand{\lorem}{Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a diam lectus.}
+
+\documentclass[9pt]{developercv} % Default font size, values from 8-12pt are recommended
 
 %----------------------------------------------------------------------------------------
-% ENTRY LIST
-%----------------------------------------------------------------------------------------
-\usepackage{tabularx}
 
-\setlength{\tabcolsep}{0pt}
-\newenvironment{entrylist}{%
-	\begin{tabular*}{\textwidth}[t]{@{\extracolsep{\fill}}ll}
-	}{%
-	\end{tabular*}
-}
-
-\newcommand{\entry}[4]{%
-	\parbox[t]{3.5cm}{%
-		#1%
-	}%
-	&\parbox[t]{14cm}{%
-		\textbf{#2}%
-		\hfill%
-		{\footnotesize \textbf{\textcolor{black}{#3}}}\\%
-		#4%
-	}\\\\}
-
-\newcommand{\slashsep}{
-	\hspace{2mm}/\hspace{2mm}
-}
-
-%----------------------------------------------------------------------------------------
-%	DOCUMENT CONTENT
-%----------------------------------------------------------------------------------------
 \begin{document}
+
+\input{common.tex}
+
+%% Just For Debug, Run the Script for real results
+%\def \langsa {en} %% es == Spanish, en == English
+%\def \jobtype {dev} % dev == Developer, gamedev, == Game Developer
+
+%----------------------------------------------------------------------------------------
+%	TITLE AND CONTACT INFORMATION
+%----------------------------------------------------------------------------------------
+
+\begin{minipage}[t]{0.45\textwidth} % 45% of the page width for name
+	\vspace{-\baselineskip} % Required for vertically aligning minipages
 	
-	%----------------------------------------------------------------------------------------
-	%	TITLE HEADLINE
-	%----------------------------------------------------------------------------------------
-	\begin{minipage}[t]{0.45\textwidth}\hrule height 0pt width 0pt%
-		\colorbox{black}{{\HUGE\textcolor{white}{\textbf{\MakeUppercase{John Doe}}}}}%
-		
-		\vspace{1mm}\LARGE{Web App Architect}
-	\end{minipage}%
-	\begin{minipage}[t]{0.3\textwidth}\hrule height 0pt width 0pt%
-		\small%
-		\icontext{MapMarker}{12}{Prague, Czech Republic}\\
-		\icontext{Phone}{12}{+420 123 456 789}\\
-		\icontext{At}{12}{\href{mailto:jan@vorisek.me}{jan@vorisek.me}}\\	
-	\end{minipage}%
-	\begin{minipage}[t]{0.3\textwidth}\hrule height 0pt width 0pt%
-		\small%
-		\icontext{Globe}{12}{\href{https://jan.vorisek.me}{jan.vorisek.me}}\\
-		\icontext{Github}{12}{\href{https://github.com/janvorisek}{github.com/janvorisek}}\\
-		\icontext{Twitter}{12}{\href{https://twitter.com/@JanVorisekCZ}{twitter.com/@JanVorisekCZ}}\\
-	\end{minipage}%
+	% If your name is very short, use just one of the lines below
+	% If your name is very long, reduce the font size or make the minipage wider and reduce the others proportionately
+	\colorbox{black}{{\huge\textcolor{white}{\textbf{\MakeUppercase{Gabriel}}}}} % First name
 	
-	% manage space by reducing font size
-	\small%
-	\vspace{0.5cm}
+	\colorbox{black}{{\huge\textcolor{white}{\textbf{\MakeUppercase{Bustillo del Cuvillo}}}}} % Last name
 	
-	%----------------------------------------------------------------------------------------
-	%	SKILLS AND TECHNOLOGIES
-	%----------------------------------------------------------------------------------------
+	\vspace{6pt}
 	
-	\cvsect{Who Am I?}%
-	\begin{minipage}[t]{0.4\textwidth}%
-		\lorem \lorem \lorem \lorem \lorem\\
-	\end{minipage}%
-	\hfill
-	\begin{minipage}[t]{0.5\textwidth}\hrule height 0pt width 0pt%
-		\vspace{-10pt}%
-		\begin{barchart}{10}{5.5}{red}{white}{black}{black}{black}{black}
-			\baritem{50}{JavaScript}{0}{0}{60}
-			\baritem{80}{PHP}{100}{0}{0}
-			\baritem{80}{SASS/LESS}{0}{0}{70}
-			\baritem{80}{Bootstrap 3/4}{0}{0}{70}
-			\baritem{40}{Git}{0}{0}{40}
-			\baritem{50}{LaTeX}{0}{0}{60}
-		\end{barchart}
-	\end{minipage}%
+	{\huge \GetTitleLocalized{\langsa}{\jobtype}} % Career or current job title
+\end{minipage}
+\begin{minipage}[t]{0.233\textwidth} % 27.5% of the page width for the first row of icons
+	\vspace{-\baselineskip} % Required for vertically aligning minipages
 	
-	\begin{center}
-			\bubbles{5/Eclipse, 6/git, 4/Office, 3/Inkscape, 3/Blender}{}
-	\end{center}
+	% The first parameter is the FontAwesome icon name, the second is the box size and the third is the text
+	% Other icons can be found by referring to fontawesome.pdf (supplied with the template) and using the word after \fa in the command for the icon you want
+	\textbf{Location: }{El Puerto de Santa Maria (Cadiz)}\\
+	\textbf{E-Mail: }{\href{mailto:gabibust@gmail.com}{gabibust@gmail.com}}\\	
+\end{minipage}
+\begin{minipage}[t]{0.30\textwidth} % 27.5% of the page width for the second row of icons
+	\vspace{-\baselineskip} % Required for vertically aligning minipages
 	
-	\cvsect{Experience}
-	\begin{entrylist}
+	% The first parameter is the FontAwesome icon name, the second is the box size and the third is the text
+	% Other icons can be found by referring to fontawesome.pdf (supplied with the template) and using the word after \fa in the command for the icon you want
+	\textbf{Web: }{\href{https://gabuscuv.github.io}{gabuscuv.github.io}}\\
+	\textbf{Github: }{\href{https://github.com/gabuscuv}{github.com/gabuscuv}}\\
+	\textbf{Linkedin: }{\href{https://www.linkedin.com/in/gabuscuv/}{linkedin.com/in/gabuscuv/}}\\
+\end{minipage}
+
+\vspace{0.5cm}
+
+%----------------------------------------------------------------------------------------
+%	INTRODUCTION, SKILLS AND TECHNOLOGIES
+%----------------------------------------------------------------------------------------
+
+%----------------------------------------------------------------------------------------
+%	ADDITIONAL INFORMATION
+%----------------------------------------------------------------------------------------
+
+\MainTechnologies{\langsa}{\jobtype}
+\hfill
+\ContributonsAndForks{\langsa}{\jobtype}
+\hfill
+\AdditionalInformation{\langsa}{\jobtype}
+
+%----------------------------------------------------------------------------------------
+%	EXPERIENCE
+%----------------------------------------------------------------------------------------
+\ExplSyntaxOn
+
+\str_case_e:nnF~{\jobtype}
+{
+	{gamedev}{
+		\Projects{\langsa}{\jobtype}
+		\JobExperience{\langsa}{\jobtype}
+		}
+	{dev}
+	{
+		\JobExperience{\langsa}{\jobtype}
+		\Projects{\langsa}{\jobtype}
+	}
+}
+{[null]}%
+
+\ExplSyntaxOff
+
+%----------------------------------------------------------------------------------------
+%	EDUCATION
+%----------------------------------------------------------------------------------------
+
+\Education{\langsa}{\jobtype}
+
+
+\cvsect{Cursos}
+\begin{entrylist}
 		\entry
-		{2017 – 3/2018}
-		{Front-end developer}
-		{Big Corporation Name Inc.}
-		{\lorem \lorem \lorem\\
-			\texttt{node.js}\slashsep\texttt{Vue.js}\slashsep\texttt{Electron}}
-		\entry
-		{2015 – 2018\\\footnotesize{part time}}
-		{Full stack developer}
-		{Famous Eshop Inc.}
-		{\lorem\lorem\\
-			\texttt{PHP}\slashsep\texttt{JS}\slashsep\texttt{MariaDB}\slashsep\texttt{Linux}}
-		\entry
-		{2013 – 2014\\\footnotesize{part time}}
-		{Junior PHP Developer}
-		{example.com}
-		{\lorem\lorem\\
-			\texttt{PHP}\slashsep\texttt{Laravel}}
-	\end{entrylist}
-	\\\\
-	\cvsect{Education}
-	\begin{entrylist}
-		\entry
-		{2013 – 2017}
-		{Master's Degree}
-		{Another Awesome University}
-		{\lorem\lorem\lorem}
-		\entry
-		{2014}
-		{ERASMUS}
-		{Awesome University in Heaven}
-		{\lorem\lorem}
-		\entry
-		{2007 – 2013}
-		{Bachelor's Degree}
-		{Awesome University in Heaven}
-		{\lorem\lorem}
-	\end{entrylist}
-	\\\\
-	\begin{minipage}[t]{0.3\textwidth}\hrule height 0pt width 0pt%
-		\cvsect{Languages}
-		\textbf{Czech} - native\\
-		\textbf{English} - C2\\
-		\textbf{Polish} - B1
-	\end{minipage}%
-	\hspace{0cm}
-	\begin{minipage}[t]{0.3\textwidth}\hrule height 0pt width 0pt%
-		\cvsect{Hobbies}
-		I love... \lorem
-	\end{minipage}%
-	\hspace{2cm}
-	\begin{minipage}[t]{0.3\textwidth}\hrule height 0pt width 0pt%
-		\cvsect{Non profit}
-		I help... \lorem
-	\end{minipage}%
-	% LANGUAGES
-	
+		{2019}
+		{\href{https://www.udemy.com/certificate/UC-OHE75YJE/}{Unreal Engine C++ Developer: Learn C++ and Make Video Games}}
+		{ por GameDev.tv en Udemy}{}
+	\entry
+		{2013}
+		{\href{https://gabuscuv.github.io/img/certificates/CCNA2.jpg}{CCNA Discovery 2 : Working at a Small-to-Medium Business or ISP }}
+		{Cisco}{}
+\end{entrylist}
+%----------------------------------------------------------------------------------------
+
 \end{document}
