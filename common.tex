@@ -33,6 +33,15 @@
 		{[null]}%
 	}
 
+\newcommand\GetContributionLocalized[1]{		
+	\str_case_e:nnF~{#1}
+	{
+		{en}{Contribution}
+		{es}{Contribución}
+	}
+	{[null]}%
+}
+
 \newcommand\GetOnSiteLocalized[1]{
 		\str_case_e:nnF~{#1}
 		{
@@ -90,11 +99,10 @@
 		\str_case_e:nnF~{#1}
 		{
 			{en}{
-			~Remade~a~Web~Application~originally~made~with~Microsoft~Silverlight~to~Node.js~with~REST~API~reverse~engineering~(because~lack~of~documentation)~\\
-
+			~Remade~a~Web~Application~originally~made~with~Microsoft~Silverlight~to~Node.js~with~REST~API~reverse~engineering~(because~lack~of~documentation)
 			\str_case_e:nnF~{#2}
 				{
-				{dev}{Detailed~achievements:~\\
+				{dev}{~\\Detailed~achievements:~\\
 				-~Improving~WebApp~offering~Microsoft~Exchange~Service~Support~and~Integration~like~other~newer~Company’s~products.~\\
 				-~Redesign~Front~Page.~\\
 				-~RPM~Packing~and~init.d~configuration}
@@ -161,7 +169,13 @@
 		~\texttt{ReactJS}\slashsep\texttt{Javascript}\slashsep\texttt{C\#}\slashsep\texttt{Entity~Framework~\&~LINQ}\slashsep\texttt{GRPC}}
 	\entry
 		{2020~-~2022,~2023}
-		{\href{https://github.com/gabuscuv/VRProjectLiteForRecruiter-HR}{VRProject},~Herramientas~\&~\href{https://github.com/gabuscuv\#unreal-engine-plugins}{Unreal~Engine~Plugins~(2023,~Extraidos/Re-Escritos~de~VRProject)~}~}
+		{\href{https://github.com/gabuscuv/VRProjectLiteForRecruiter-HR}{VRProject},~
+		\str_case_e:nnF~{#1}
+		{
+			{en}{Tools~}
+			{es}{Herramientas~}
+		}{[null]}%
+		~\&~\href{https://github.com/gabuscuv\#unreal-engine-plugins}{Unreal~Engine~Plugins~(2023,~Extraidos/Re-Escritos~de~VRProject)~}~}
 		{Solo~Dev}
 		{
 		\str_case_e:nnF~{#1}
@@ -186,19 +200,19 @@
 						-~\href{https://github.com/gabuscuv/AsyncMapFramework}{ASyncMapFramework}~
 						\str_case_e:nnF~{#1}
 						{
-							{en}{-~A~Set~of~Components~and~Interfaces~for~loading~maps~Async~thought~for~VR}
+							{en}{-~A~Set~of~Components~and~Interfaces~for~loading~maps~Async~mainly~for~VR}
 							{es}{-~Un~conjunto~de~componentes~e~interfaces~para~cargar~mapas~asincrónicos~para~VR}
 						}{[null]}%
 						~\\
 						-~\href{https://github.com/gabuscuv/Custom3DSubtitles}{Custom3DSubtitles}~
 						\str_case_e:nnF~{#1}
 						{
-							{en}{-~A~Set~of~Components~and~Interfaces~to~show~stylish~2.5D~captions~thought~for~VR}
+							{en}{-~A~Set~of~Components~and~Interfaces~to~show~stylish~2.5D~captions~mainly~for~VR}
 							{es}{-~Un~conjunto~de~componentes~e~interfaces~para~mostrar~estilosos~subtítulos~2.5D~para~VR}
 						}{[null]}%
 					}{[null]}%
-				}{[null]}%	
-			\\
+				}{[null]}%
+		\\
 		\texttt{C++~17}\slashsep\texttt{Unreal~Engine~4}\slashsep\texttt{FMOD}\slashsep\texttt{IMGUI}\slashsep\texttt{OpenXR}\slashsep\texttt{Oculus}\slashsep\texttt{golang}\slashsep\texttt{C\#}
 		}
 \end{entrylist}
@@ -214,25 +228,25 @@
 
 \begin{entrylist}
 	\entry
-		{2012~--~2014\\\footnotesize{2~\GetYearsLocalized{#1}}}
+		{2015~--~2017\\\footnotesize{2~\GetYearsLocalized{#1}}}
 		{
 		\str_case_e:nnF~{#1}
 		{
-			{en}{[EQF5]~Higher~National~Diploma~in~Multi-Platform~Applications~Development}
+			{en}{[EQF5]~HND-Equivalent~Studies~in~Multi-Platform~Applications~Development}
 			{es}{[FPGS]~Tecnico~Superior~en~Desarrollo~de~Aplicaciones~Multiplataformas}
 		}{[null]}%			
 		}
-		{I.E.S~Agora,~Caceres,~Spain~-~Remote}
+		{I.E.S~Agora,~Caceres,~Spain~}
 		{
 		\str_case_e:nnF~{#1}
 			{
 				{en}{}
 				{es}{}
 			}{[null]}%
-		\texttt{C\#~\&~.Net~Framework}\slashsep\texttt{Microsoft~SQL~Server}\slashsep\texttt{Microsoft~Azure}\slashsep\texttt{JavaScript}
+			\texttt{Java}\slashsep\texttt{C\#~\&~.Net~Framework}\slashsep\texttt{Microsoft~SQL~Server}\slashsep\texttt{Android}
 	}
 	\entry
-		{2015~--~2017\\\footnotesize{2~\GetYearsLocalized{#1}}}
+		{2012~--~2014\\\footnotesize{2~\GetYearsLocalized{#1}}}
 		{
 		\str_case_e:nnF~{#1}
 		{
@@ -240,27 +254,63 @@
 			{es}{[FPGM]~Tecnico~en~Sistemas~Microinformaticos~y~Redes}
 		}{[null]}%
 		}
-		
-		{KnowledgeMill~Limited,~London,~England~-~\GetOnSiteLocalized{#1}}
+		{Educatec,~Caceres,~Spain~}
 		{
 		\str_case_e:nnF~{#1}
 		{
 			{en}{}
 			{es}{}
 		}{[null]}%
-		\texttt{Node.js}\slashsep\texttt{JS/ECMA6+}\slashsep\texttt{BootStrap}\slashsep\texttt{Microsoft~Exchange~Service}\slashsep\texttt{CentOS/RPM}}
+		\texttt{Cisco~IOS}\slashsep\texttt{Fedora~\&~Debian}\slashsep\texttt{Windows~Server}}
 \end{entrylist}
 }
 
 \newcommand\MainTechnologies[2]{
 	\begin{minipage}[t]{0.3\textwidth}
 		\vspace{-\baselineskip}~%~Required~for~vertically~aligning~minipages
-		\cvsect{Principales~Tecnologías}\\
-		\textbf{Lenguajes~de~Programación:~}\\~C\#,~C++,~Javascript~\\
-		\textbf{Base~de~Datos}~MySQL/MariaDB,~Microsoft~SQL~Server,~SQLite~\\
-		\textbf{Sistemas~Operativos}~Red~Hat-like,~Debian-Like,
-	macOS,~*BSD,~Windows~\\
-		\textbf{Herramientas}~-~Visual~Studio~(Code),~Git
+		\cvsect{
+		\str_case_e:nnF~{#1}
+		{
+			{en}{Main~Technologies}
+			{es}{Principales~Tecnologías}
+		}{[null]}%	
+		}\\
+		\textbf{
+			\str_case_e:nnF~{#1}
+			{
+				{en}{Main~Languages:~}
+				{es}{Lenguajes~de~Programación:~}
+			}{[null]}%
+			}\\~C\#,~C++,~Javascript~\\
+		\str_case_e:nnF~{#2}
+		{
+			{gamedev}{	
+				\textbf{Engine:}~-~Unreal~Engine\\
+				\textbf{Middleware:}~-~FMOD,~Dear~ImGui}
+			{dev}{		
+				\textbf{\str_case_e:nnF~{#1}
+				{
+					{en}{Databases:}
+					{es}{Base~de~Datos:}
+				}{[null]}%
+					}~MySQL/MariaDB,~Microsoft~SQL~Server,~SQLite~\\
+				\textbf{
+				\str_case_e:nnF~{#1}
+					{
+						{en}{Operating~Systems:}
+						{es}{Sistemas~Operativos:}
+					}{[null]}%
+					}~Red~Hat-like,~Debian-Like,
+			macOS,~Windows~}
+		}{[null]}%
+		\\
+		\textbf{
+			\str_case_e:nnF~{#1}
+			{
+				{en}{Tools:}
+				{es}{Herramientas:}
+			}{[null]}%
+			}~Visual~Studio~(Code),~Git
 	\end{minipage}
 }
 
@@ -269,11 +319,18 @@
 	\begin{minipage}[t]{0.3\textwidth}
 		\vspace{-\baselineskip}~%~Required~for~vertically~aligning~minipages
 		
-		\cvsect{Contribuciones~\&~Forks}	
+		\cvsect{
+			\str_case_e:nnF~{#1}
+			{
+				{en}{\GetContributionLocalized{#1}s~}
+				{es}{\GetContributionLocalized{#1}es~}
+			}{[null]}%
+			\&~Forks
+			}	
 		\\
-		~\href{https://github.com/ValveSoftware/steam-audio/pull/253}{Valve~/~Steam~Audio~(Python)}\\~\textit{Contribución}~\\~
-		~\href{https://github.com/jameslieu/howlongtobeat/pull/7}{jameslieu~/~howlongtobeat~(C\#)}\\~\textit{Contribución}~\\
-		~nowrep~/~obs-vkcapture~(C)\\~\textit{\href{https://github.com/gabuscuv/obs-vkcapture}{Fork}~\&~\href{https://github.com/nowrep/obs-vkcapture/pull/142}{Contribución}}~\\
+		~\href{https://github.com/ValveSoftware/steam-audio/pull/253}{Valve~/~Steam~Audio~(Python)}\\~\textit{\GetContributionLocalized{#1}}~\\~
+		~\href{https://github.com/jameslieu/howlongtobeat/pull/7}{jameslieu~/~howlongtobeat~(C\#)}\\~\textit{\GetContributionLocalized{#1}}~\\
+		~nowrep~/~obs-vkcapture~(C)\\~\textit{\href{https://github.com/gabuscuv/obs-vkcapture}{Fork}~\&~\href{https://github.com/nowrep/obs-vkcapture/pull/142}{\GetContributionLocalized{#1}}}~\\
 	\end{minipage}
 }
 
@@ -281,13 +338,85 @@
 	\begin{minipage}[t]{0.21\textwidth}
 		\vspace{-\baselineskip}~%~Required~for~vertically~aligning~minipages
 		
-		\cvsect{Información~Adicional}
+		\cvsect{
+			\str_case_e:nnF~{#1}
+			{
+				{en}{Additional~Information}
+				{es}{Información~Adicional}
+			}{[null]}%
+			}
 		\\
-		-~Alta~en~Garantía~Juvenil~\\
-		-~Experiencia~trabajando~en~equipos~internacionales~(Anglo)~y~en~remoto~\\
-		-~Libre~para~Relocalizacion~\\~
-		-~Disponibilidad~Inmediata
+		\str_case_e:nnF~{#1}
+		{
+			{en}{-~Signed~up~in~\href{https://ec.europa.eu/social/main.jsp?catId=1036&langId=en}{"Youth~Guarantee"}}
+			{es}{-~Alta~en~Garantía~Juvenil~}
+		}{[null]}%
+		\\
+		\str_case_e:nnF~{#1}
+		{
+			{en}{-~Experience~working~in~International~Teams~and~on~remote}
+			{es}{-~Experiencia~trabajando~en~equipos~internacionales~(Anglo)~y~en~remoto~}
+		}{[null]}%
+		\\
+		\str_case_e:nnF~{#1}
+		{
+			{en}{-~Willing~to~relocate}
+			{es}{-~Libre~para~Relocalizacion~}
+		}{[null]}%
+		\\
+		\str_case_e:nnF~{#1}
+		{
+			{en}{-~Immediate~availability}
+			{es}{-~Disponibilidad~Inmediata}
+		}{[null]}%
 	\end{minipage}
+}
+
+
+\newcommand\Courses[2]{
+	\cvsect{
+	\str_case_e:nnF~{#1}
+	{
+		{en}{Courses}
+		{es}{Cursos}
+	}{[null]}%
+		}
+	\begin{entrylist}
+		\str_case_e:nnF~{#2}
+		{
+			{gamedev}
+			{
+				\entry{
+					\str_case_e:nnF~{#1}
+					{
+						{en}{On-Going}
+						{es}{En~Proceso}
+					}{[null]}%
+					}{\href{https://learn.unity.com/u/5dcaa0efedbc2a002034f647}{Unity~-~Pathway:~Junior~Programmer}}{Unity~Learn}{}
+				\entry
+				{2019}
+				{\href{https://www.udemy.com/certificate/UC-OHE75YJE/}{Unreal~Engine~C++~Developer:~Learn~C++~and~Make~Video~Games}}
+				{
+					\str_case_e:nnF~{#1}
+					{
+						{en}{~by~GameDev.tv~on~Udemy}
+						{es}{~por~GameDev.tv~en~Udemy}
+					}{[null]}%
+				}{}
+			}
+			{dev}
+			{
+			\entry
+				{2013}
+				{\href{https://gabuscuv.github.io/img/certificates/CCNA2.jpg}{CCNA~Discovery~2~:~Working~at~a~Small-to-Medium~Business~or~ISP~}}
+				{Cisco}{}
+			}
+		}{[null]}%
+		\entry
+		{2013}
+		{\href{https://gabuscuv.github.io/img/certificates/CCNA2.jpg}{Adobe~Photoshop~CS3}}
+		{Grupo~System}{}
+	\end{entrylist}
 }
 
 \ExplSyntaxOff
