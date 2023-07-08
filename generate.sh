@@ -34,3 +34,7 @@ do
 done
 
 rm *.aux *.log *.out *.gz
+
+## For some reason, It's generating a white page just in one kind of resume
+qpdf output/cv-BustilloDelCuvilloGabriel-es-gamedev.pdf --pages . 1 -- cv-BustilloDelCuvilloGabriel-es-gamedev.pdf
+mv ./cv-BustilloDelCuvilloGabriel-es-gamedev.pdf output/cv-BustilloDelCuvilloGabriel-es-gamedev.pdf

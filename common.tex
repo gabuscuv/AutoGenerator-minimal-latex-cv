@@ -76,10 +76,8 @@
 		{
 		\str_case_e:nnF~{#1}
 		{
-			{en}{-~Software~Creation~y~maintenance~in~.NET~Framework,~Refactoring~and~migration~tasks~to~.NET~Standard/Core.\\
-	-~Creation~and~Design~of~Unit~Tests~for~old~and~new~projects~}
-			{es}{-~Creación~y~mantenimiento~de~software~en~.NET~Framework,~Refactorización~y~tareas~de~migración~a~.NET~Standard/Core.\\
-			-~Creación~y~Diseño~de~Pruebas~Unitarias~para~proyectos~antiguos~y~nuevos~}
+			{en}{-~Creation,~design,~refactoring~and~maintenance~of~Software~and~unit~tests~in~.NET~Framework,~Refactoring~and~migration~tasks~to~.NET~Standard/Core~for~old~and~new~projects~}
+			{es}{-~Creación,~diseño,~refactorización~y~mantenimiento~de~software~y~pruebas~unitarias~en~.NET~Framework~para~proyectos~antiguos~y~nuevos~ademas~de~tareas~de~migración~a~.NET~Standard/Core}
 		}{[null]}%
 		\\
 		\texttt{C\#~\&~.Net~Framework}\slashsep\texttt{Microsoft~SQL~Server}\slashsep\texttt{Microsoft~Azure}\slashsep\texttt{JavaScript}
@@ -99,7 +97,7 @@
 		\str_case_e:nnF~{#1}
 		{
 			{en}{
-			~Remade~a~Web~Application~originally~made~with~Microsoft~Silverlight~to~Node.js~with~REST~API~reverse~engineering~(because~lack~of~documentation)
+			~Remade~a~Web~Application~originally~made~with~Microsoft~Silverlight~to~Node.js~with~REST~API~reverse~engineering~(because~the~lack~of~documentation)
 			\str_case_e:nnF~{#2}
 				{
 				{dev}{~\\Detailed~achievements:~\\
@@ -175,7 +173,13 @@
 			{en}{Tools~}
 			{es}{Herramientas~}
 		}{[null]}%
-		~\&~\href{https://github.com/gabuscuv\#unreal-engine-plugins}{Unreal~Engine~Plugins~(2023,~Extraidos/Re-Escritos~de~VRProject)~}~}
+		~\&~Unreal~Engine~Plugins~(2023,~
+		\str_case_e:nnF~{#1}
+		{
+			{en}{Extracted/Rewritten~from~VRProject}
+			{es}{Extraidos/Re-Escritos~de~VRProject}
+		}{[null]}%
+		)}
 		{Solo~Dev}
 		{
 		\str_case_e:nnF~{#1}
@@ -200,19 +204,19 @@
 						-~\href{https://github.com/gabuscuv/AsyncMapFramework}{ASyncMapFramework}~
 						\str_case_e:nnF~{#1}
 						{
-							{en}{-~A~Set~of~Components~and~Interfaces~for~loading~maps~Async~mainly~for~VR}
-							{es}{-~Un~conjunto~de~componentes~e~interfaces~para~cargar~mapas~asincrónicos~para~VR}
+							{en}{-~A~Set~of~Components~and~Interfaces~for~loading~maps~asynchronously~mainly~for~VR}
+							{es}{-~Un~conjunto~de~clases~e~interfaces~para~cargar~mapas~asincrónicos~para~VR}
 						}{[null]}%
 						~\\
 						-~\href{https://github.com/gabuscuv/Custom3DSubtitles}{Custom3DSubtitles}~
 						\str_case_e:nnF~{#1}
 						{
 							{en}{-~A~Set~of~Components~and~Interfaces~to~show~stylish~2.5D~captions~mainly~for~VR}
-							{es}{-~Un~conjunto~de~componentes~e~interfaces~para~mostrar~estilosos~subtítulos~2.5D~para~VR}
+							{es}{-~Un~conjunto~de~clases~e~interfaces~para~mostrar~estilosos~subtítulos~2.5D~para~VR}
 						}{[null]}%
+						\\
 					}{[null]}%
 				}{[null]}%
-		\\
 		\texttt{C++~17}\slashsep\texttt{Unreal~Engine~4}\slashsep\texttt{FMOD}\slashsep\texttt{IMGUI}\slashsep\texttt{OpenXR}\slashsep\texttt{Oculus}\slashsep\texttt{golang}\slashsep\texttt{C\#}
 		}
 \end{entrylist}
@@ -261,7 +265,8 @@
 			{en}{}
 			{es}{}
 		}{[null]}%
-		\texttt{Cisco~IOS}\slashsep\texttt{Fedora~\&~Debian}\slashsep\texttt{Windows~Server}}
+		\texttt{Cisco~IOS}\slashsep\texttt{Fedora~\&~Debian}\slashsep\texttt{Windows~Server}
+		}
 \end{entrylist}
 }
 
@@ -278,15 +283,15 @@
 		\textbf{
 			\str_case_e:nnF~{#1}
 			{
-				{en}{Main~Languages:~}
+				{en}{Programming~Languages:~}
 				{es}{Lenguajes~de~Programación:~}
 			}{[null]}%
 			}\\~C\#,~C++,~Javascript~\\
 		\str_case_e:nnF~{#2}
 		{
 			{gamedev}{	
-				\textbf{Engine:}~-~Unreal~Engine\\
-				\textbf{Middleware:}~-~FMOD,~Dear~ImGui}
+				\textbf{Engine:}~Unreal~Engine\\
+				\textbf{Middleware:}~FMOD,~Dear~ImGui}
 			{dev}{		
 				\textbf{\str_case_e:nnF~{#1}
 				{
@@ -328,8 +333,8 @@
 			\&~Forks
 			}	
 		\\
-		~\href{https://github.com/ValveSoftware/steam-audio/pull/253}{Valve~/~Steam~Audio~(Python)}\\~\textit{\GetContributionLocalized{#1}}~\\~
-		~\href{https://github.com/jameslieu/howlongtobeat/pull/7}{jameslieu~/~howlongtobeat~(C\#)}\\~\textit{\GetContributionLocalized{#1}}~\\
+		~Valve~/~Steam~Audio~(Python)\\~\href{https://github.com/ValveSoftware/steam-audio/pull/253}{\textit{\GetContributionLocalized{#1}}}~\\~
+		~jameslieu~/~howlongtobeat~(C\#)\\~\href{https://github.com/jameslieu/howlongtobeat/pull/7}{\textit{\GetContributionLocalized{#1}}}~\\
 		~nowrep~/~obs-vkcapture~(C)\\~\textit{\href{https://github.com/gabuscuv/obs-vkcapture}{Fork}~\&~\href{https://github.com/nowrep/obs-vkcapture/pull/142}{\GetContributionLocalized{#1}}}~\\
 	\end{minipage}
 }
