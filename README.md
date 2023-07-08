@@ -2,12 +2,13 @@
 
 Minimal CV template using LaTeX.
 
-# Preview
-[![PDF Result](https://jan.vorisek.me/images/main-1.jpg "PDF Result")](minimal-latex-cv.pdf)
+## Preview
 
+[![PDF Result](https://jan.vorisek.me/images/main-1.jpg "PDF Result")](minimal-latex-cv.pdf)
 
 ## Authors
 
+* **Gabriel Bustillo del Cuvillo** <[**gabibust@gmail.com**](mailto:gabibust@gmail.com)>
 * **Jan Vorisek** <[**jan@vorisek.me**](mailto:jan@vorisek.me)>
 
 Based on CV by [**Jan Küster**](https://github.com/jankapunkt). See his [*original work*](https://github.com/jankapunkt/latexcv).
