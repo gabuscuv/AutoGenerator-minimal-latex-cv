@@ -1,5 +1,7 @@
 \ExplSyntaxOn
 
+\tl_const:Nx\c__npkg_httpsprefix_tl{https\char_generate:nn{58}{12}//}
+
 \newcommand\GetTitleLocalized[2]{		
 		\str_case_e:nnF~{#2}
 		{
@@ -150,12 +152,12 @@
 			{en}{for~}
 			{es}{para~}
 		}{[null]}%
-		\href{https://github.com/gabuscuv/WebScrapperC}{Stratos~Ads}~\&~\href{https://github.com/gabuscuv/WebScrapperRS}{Devuego~(Eventos)}}
+		\href{\c__npkg_httpsprefix_tl github.com/gabuscuv/WebScrapperC}{Stratos~Ads}~\&~\href{\c__npkg_httpsprefix_tl github.com/gabuscuv/WebScrapperRS}{Devuego~(Eventos)}}
 		{}
 		{\texttt{C~(Stratos)}\slashsep\texttt{Rust~(Devuego)}\slashsep\texttt{libxml2}\slashsep\texttt{libcurl}\slashsep\texttt{CMake}\slashsep\texttt{XPath}}
 	\entry
 		{2023}
-		{\href{https://github.com/gabuscuv/BacklogDatabase-Utils}{BacklogDatabase-Utils~(CLI)}~//~\href{https://github.com/gabuscuv/BeatenGames-Source}{BeatenGames~(Web)}~//~\href{https://github.com/gabuscuv/BeatenGamesService}{BeatenGamesService~(Daemon/Service)}}
+		{\href{\c__npkg_httpsprefix_tl github.com/gabuscuv/BacklogDatabase-Utils}{BacklogDatabase-Utils~(CLI)}~//~\href{\c__npkg_httpsprefix_tl github.com/gabuscuv/BeatenGames-Source}{BeatenGames~(Web)}~//~\href{\c__npkg_httpsprefix_tl github.com/gabuscuv/BeatenGamesService}{BeatenGamesService~(Daemon/Service)}}
 		{}
 		{
 			\str_case_e:nnF~{#1}
@@ -167,19 +169,19 @@
 		~\texttt{ReactJS}\slashsep\texttt{Javascript}\slashsep\texttt{C\#}\slashsep\texttt{Entity~Framework~\&~LINQ}\slashsep\texttt{GRPC}}
 	\entry
 		{2020~-~2022,~2023}
-		{\href{https://github.com/gabuscuv/VRProjectLiteForRecruiter-HR}{VRProject},~
+		{\href{\c__npkg_httpsprefix_tl github.com/gabuscuv/VRProjectLiteForRecruiter-HR}{VRProject},~
 		\str_case_e:nnF~{#1}
 		{
 			{en}{Tools~}
 			{es}{Herramientas~}
 		}{[null]}%
-		~\&~Unreal~Engine~Plugins~(2023,~
+		~\&~\href{\c__npkg_httpsprefix_tl github.com/gabuscuv\#unreal-engine-plugins}{Unreal~Engine~Plugins~(2023,~
 		\str_case_e:nnF~{#1}
 		{
 			{en}{Extracted/Rewritten~from~VRProject}
 			{es}{Extraidos/Re-Escritos~de~VRProject}
 		}{[null]}%
-		)}
+		)}}
 		{Solo~Dev}
 		{
 		\str_case_e:nnF~{#1}
@@ -193,7 +195,7 @@
 					{dev}{}
 					{gamedev}
 					{
-						-~\href{https://github.com/gabuscuv/CustomOpenXRControllerIntegration}{CustomOpenXRControllerIntegration}
+						-~\href{\c__npkg_httpsprefix_tl github.com/gabuscuv/CustomOpenXRControllerIntegration}{CustomOpenXRControllerIntegration}
 						\str_case_e:nnF~{#1}
 						{
 							{en}{-~A~Unified~Highlight~Button~System~for~VRExpansion~\&~OpenXR}
@@ -201,14 +203,14 @@
 						}{[null]}%
 						
 						~\\
-						-~\href{https://github.com/gabuscuv/AsyncMapFramework}{ASyncMapFramework}~
+						-~\href{\c__npkg_httpsprefix_tl github.com/gabuscuv/AsyncMapFramework}{ASyncMapFramework}~
 						\str_case_e:nnF~{#1}
 						{
 							{en}{-~A~Set~of~Components~and~Interfaces~for~loading~maps~asynchronously~mainly~for~VR}
 							{es}{-~Un~conjunto~de~clases~e~interfaces~para~cargar~mapas~asincrónicos~para~VR}
 						}{[null]}%
 						~\\
-						-~\href{https://github.com/gabuscuv/Custom3DSubtitles}{Custom3DSubtitles}~
+						-~\href{\c__npkg_httpsprefix_tl github.com/gabuscuv/Custom3DSubtitles}{Custom3DSubtitles}~
 						\str_case_e:nnF~{#1}
 						{
 							{en}{-~A~Set~of~Components~and~Interfaces~to~show~stylish~2.5D~captions~mainly~for~VR}
@@ -333,9 +335,9 @@
 			\&~Forks
 			}	
 		\\
-		~Valve~/~Steam~Audio~(Python)\\~\href{https://github.com/ValveSoftware/steam-audio/pull/253}{\textit{\GetContributionLocalized{#1}}}~\\~
-		~jameslieu~/~howlongtobeat~(C\#)\\~\href{https://github.com/jameslieu/howlongtobeat/pull/7}{\textit{\GetContributionLocalized{#1}}}~\\
-		~nowrep~/~obs-vkcapture~(C)\\~\textit{\href{https://github.com/gabuscuv/obs-vkcapture}{Fork}~\&~\href{https://github.com/nowrep/obs-vkcapture/pull/142}{\GetContributionLocalized{#1}}}~\\
+		~Valve~/~Steam~Audio~(Python)\\~\href{\c__npkg_httpsprefix_tl github.com/ValveSoftware/steam-audio/pull/253}{\textit{\GetContributionLocalized{#1}}}~\\~
+		~jameslieu~/~howlongtobeat~(C\#)\\~\href{\c__npkg_httpsprefix_tl github.com/jameslieu/howlongtobeat/pull/7}{\textit{\GetContributionLocalized{#1}}}~\\
+		~nowrep~/~obs-vkcapture~(C)\\~\textit{\href{\c__npkg_httpsprefix_tl github.com/gabuscuv/obs-vkcapture}{Fork}~\&~\href{\c__npkg_httpsprefix_tl github.com/nowrep/obs-vkcapture/pull/142}{\GetContributionLocalized{#1}}}~\\
 	\end{minipage}
 }
 
@@ -353,7 +355,7 @@
 		\\
 		\str_case_e:nnF~{#1}
 		{
-			{en}{-~Signed~up~in~\href{https://ec.europa.eu/social/main.jsp?catId=1036&langId=en}{"Youth~Guarantee"}}
+			{en}{-~Signed~up~in~\href{\c__npkg_httpsprefix_tl ec.europa.eu/social/main.jsp?catId=1036&langId=en}{"Youth~Guarantee"}}
 			{es}{-~Alta~en~Garantía~Juvenil~}
 		}{[null]}%
 		\\
@@ -397,10 +399,10 @@
 						{en}{On-Going}
 						{es}{En~Proceso}
 					}{[null]}%
-					}{\href{https://learn.unity.com/u/5dcaa0efedbc2a002034f647}{Unity~-~Pathway:~Junior~Programmer}}{Unity~Learn}{}
+					}{\href{\c__npkg_httpsprefix_tl learn.unity.com/u/5dcaa0efedbc2a002034f647}{Unity~-~Pathway:~Junior~Programmer}}{Unity~Learn}{}
 				\entry
 				{2019}
-				{\href{https://www.udemy.com/certificate/UC-OHE75YJE/}{Unreal~Engine~C++~Developer:~Learn~C++~and~Make~Video~Games}}
+				{\href{\c__npkg_httpsprefix_tl www.udemy.com/certificate/UC-OHE75YJE/}{Unreal~Engine~C++~Developer:~Learn~C++~and~Make~Video~Games}}
 				{
 					\str_case_e:nnF~{#1}
 					{
@@ -413,13 +415,13 @@
 			{
 			\entry
 				{2013}
-				{\href{https://gabuscuv.github.io/img/certificates/CCNA2.jpg}{CCNA~Discovery~2~:~Working~at~a~Small-to-Medium~Business~or~ISP~}}
+				{\href{\c__npkg_httpsprefix_tl gabuscuv.github.io/img/certificates/CCNA2.jpg}{CCNA~Discovery~2~:~Working~at~a~Small-to-Medium~Business~or~ISP~}}
 				{Cisco}{}
 			}
 		}{[null]}%
 		\entry
 		{2013}
-		{\href{https://gabuscuv.github.io/img/certificates/CCNA2.jpg}{Adobe~Photoshop~CS3}}
+		{\href{\c__npkg_httpsprefix_tl gabuscuv.github.io/img/certificates/CCNA2.jpg}{Adobe~Photoshop~CS3}}
 		{Grupo~System}{}
 	\end{entrylist}
 }
