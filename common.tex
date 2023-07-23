@@ -18,9 +18,24 @@
 	}
 
 \begin{entrylist}
+% Post-VRProject
 \project_webscrapper{#1}{#2}
-\project_Backlog{#1}{#2}
+\str_case_e:nnF~{#2}
+    {
+        {dev}{\project_Backlog{#1}{#2}}
+        {gamedev}{}
+    }{[null]}%
+% End of Post-VRProject
+
 \project_vrprojectandunrealrelated{#1}{#2}
+
+% Pre-VRProject
+\str_case_e:nnF~{#2}
+    {
+        {dev}{}
+        {gamedev}{\project_gamedevmisc{#1}{#2}}
+    }{[null]}%
+
 \end{entrylist}
 }
 
@@ -158,7 +173,7 @@
 				{en}{Tools:}
 				{es}{Herramientas:}
 			}{[null]}%
-			}~Visual~Studio~(Code),~Git
+			}~Visual~Studio~(Code),~Git~,~Photoshop~\&~Gimp
 	\end{minipage}
 }
 

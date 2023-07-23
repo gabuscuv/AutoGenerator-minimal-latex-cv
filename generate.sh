@@ -29,12 +29,10 @@ do
     for LANG in $LANGS
     do
         pdflatex -synctex=1 -interaction=nonstopmode '\def \langsa {'$LANG'} \def \jobtype {'$JOBTYPE'} \input{'$NAMEFILE'.tex}'
-        mv $NAMEFILE.pdf $PWD/output/`getResumeLocalized $LANG`-$NAME-$LANG-$JOBTYPE.pdf
+        qpdf $NAMEFILE.pdf --pages . 1 -- $PWD/output/`getResumeLocalized $LANG`-$NAME-$LANG-$JOBTYPE.pdf
     done
 done
 
 rm *.aux *.log *.out *.gz
 
-## For some reason, It's generating a white page just in one kind of resume
-qpdf output/cv-BustilloDelCuvilloGabriel-es-gamedev.pdf --pages . 1 -- cv-BustilloDelCuvilloGabriel-es-gamedev.pdf
-mv ./cv-BustilloDelCuvilloGabriel-es-gamedev.pdf output/cv-BustilloDelCuvilloGabriel-es-gamedev.pdf
+cp output/* $HOME/git/gabuscuv-portfolio/public/d/
