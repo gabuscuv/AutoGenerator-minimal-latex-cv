@@ -1,0 +1,89 @@
+\ExplSyntaxOn
+
+\newcommand\project_webscrapper[2]{
+    	\entry
+		{2023}
+		{WebScrappers~
+		\str_case_e:nnF~{#1}
+		{
+			{en}{for~}
+			{es}{para~}
+		}{[null]}%
+		\href{\c__npkg_httpsprefix_tl github.com/gabuscuv/WebScrapperC}{Stratos~Ads}~\&~\href{\c__npkg_httpsprefix_tl github.com/gabuscuv/WebScrapperRS}{Devuego~(Eventos)}}
+		{}
+		{\texttt{C~(Stratos)}\slashsep\texttt{Rust~(Devuego)}\slashsep\texttt{libxml2}\slashsep\texttt{libcurl}\slashsep\texttt{CMake}\slashsep\texttt{XPath}}
+}
+
+\newcommand\project_Backlog[2]{
+    \entry
+		{2023}
+		{\href{\c__npkg_httpsprefix_tl github.com/gabuscuv/BacklogDatabase-Utils}{BacklogDatabase-Utils~(CLI)}~//~\href{\c__npkg_httpsprefix_tl github.com/gabuscuv/BeatenGames-Source}{BeatenGames~(Web)}~//~\href{\c__npkg_httpsprefix_tl github.com/gabuscuv/BeatenGamesService}{BeatenGamesService~(Daemon/Service)}}
+		{}
+		{
+			\str_case_e:nnF~{#1}
+			{
+				{en}{A~variety~of~tools~and~a~viewer~for~catalog~my~pending~games}
+				{es}{Una~variedad~de~herramientas~y~un~visor~para~catalogar~mis~juegos~pendientes.}
+			}{[null]}%
+			\\
+		~\texttt{ReactJS}\slashsep\texttt{Javascript}\slashsep\texttt{C\#}\slashsep\texttt{Entity~Framework~\&~LINQ}\slashsep\texttt{GRPC}}
+}
+
+\newcommand\project_vrprojectandunrealrelated[2]{
+	\entry
+		{2020~-~2022,~2023}
+		{\href{\c__npkg_httpsprefix_tl github.com/gabuscuv/VRProjectLiteForRecruiter-HR}{VRProject},~
+		\str_case_e:nnF~{#1}
+		{
+			{en}{Tools~}
+			{es}{Herramientas~}
+		}{[null]}%
+		~\&~\href{\c__npkg_httpsprefix_tl github.com/gabuscuv\#unreal-engine-plugins}{Unreal~Engine~Plugins~(2023,~
+		\str_case_e:nnF~{#1}
+		{
+			{en}{Extracted/Rewritten~from~VRProject}
+			{es}{Extraidos/Re-Escritos~de~VRProject}
+		}{[null]}%
+		)}}
+		{Solo~Dev}
+		{
+		\str_case_e:nnF~{#1}
+			{
+				{en}{A~narrative~mystery~puzzle~VR~Game~with~virtual~augmented~reality~and~an~AI~companion~using~Metahumans}
+				{es}{Un~juego~de~realidad~virtual~de~misterio~narrativo~con~realidad~aumentada~(virtual),~con~un~IA~de~compañia~y~el~uso~de~Metahumans,~Ademas~de~otras~herramientas~para~su~desarrollo.}
+			}{[null]}%
+			~\\
+			\str_case_e:nnF~{#2}
+				{
+					{dev}{}
+					{gamedev}
+					{
+						-~\href{\c__npkg_httpsprefix_tl github.com/gabuscuv/CustomOpenXRControllerIntegration}{CustomOpenXRControllerIntegration}
+						\str_case_e:nnF~{#1}
+						{
+							{en}{-~A~Unified~Highlight~Button~System~for~VRExpansion~\&~OpenXR}
+							{es}{-~Sistema~unificado~de~botones~destacados~para~VRExpansion~y~OpenXR}
+						}{[null]}%
+						
+						~\\
+						-~\href{\c__npkg_httpsprefix_tl github.com/gabuscuv/AsyncMapFramework}{ASyncMapFramework}~
+						\str_case_e:nnF~{#1}
+						{
+							{en}{-~A~Set~of~Components~and~Interfaces~for~loading~maps~asynchronously~mainly~for~VR}
+							{es}{-~Un~conjunto~de~clases~e~interfaces~para~cargar~mapas~asincrónicos~para~VR}
+						}{[null]}%
+						~\\
+						-~\href{\c__npkg_httpsprefix_tl github.com/gabuscuv/Custom3DSubtitles}{Custom3DSubtitles}~
+						\str_case_e:nnF~{#1}
+						{
+							{en}{-~A~Set~of~Components~and~Interfaces~to~show~stylish~2.5D~captions~mainly~for~VR}
+							{es}{-~Un~conjunto~de~clases~e~interfaces~para~mostrar~estilosos~subtítulos~2.5D~para~VR}
+						}{[null]}%
+						\\
+					}{[null]}%
+				}{[null]}%
+		\texttt{C++~17}\slashsep\texttt{Unreal~Engine~4}\slashsep\texttt{FMOD}\slashsep\texttt{IMGUI}\slashsep\texttt{OpenXR}\slashsep\texttt{Oculus}\slashsep\texttt{golang}\slashsep\texttt{C\#}
+		}
+}
+
+\ExplSyntaxOff

@@ -1,0 +1,83 @@
+\ExplSyntaxOn
+
+\newcommand\WorkExperience_itixo[2]{
+	\entry
+		{2018~--~2020\\\footnotesize{2.5~\GetYearsLocalized{#1}}}
+		{
+		
+		\str_case_e:nnF~{#1}
+		{
+			{en}{Mainly~Backend~Developer}
+			{es}{Principalmente~Desarrollador~Backend}
+		}
+		{[null]}%
+			
+		}
+		{Itixo~s.r.o/ICT~Capital~s.r.o,~Prague,~Czechia~-~Remote}
+		{
+		\str_case_e:nnF~{#1}
+		{
+			{en}{-~Creation,~design,~refactoring~and~maintenance~of~Software~and~unit~tests~in~.NET~Framework,~Refactoring~and~migration~tasks~to~.NET~Standard/Core~for~old~and~new~projects~}
+			{es}{-~Creación,~diseño,~refactorización~y~mantenimiento~de~software~y~pruebas~unitarias~en~.NET~Framework~para~proyectos~antiguos~y~nuevos~ademas~de~tareas~de~migración~a~.NET~Standard/Core}
+		}{[null]}%
+		\\
+		\texttt{C\#~\&~.Net~Framework}\slashsep\texttt{Microsoft~SQL~Server}\slashsep\texttt{Microsoft~Azure}\slashsep\texttt{JavaScript}
+	}
+}
+
+\newcommand\WorkExperience_knowledgemill[2]{
+	\entry
+		{2017\\\footnotesize{0.3~\GetYearsLocalized{#1}}}
+		{
+		\str_case_e:nnF~{#1}
+		{
+			{en}{Full-Stack~Software~Developer}
+			{es}{Desarrollador~Full~stack}
+		}{[null]}%
+		}
+		
+		{KnowledgeMill~Limited,~London,~England~-~\GetOnSiteLocalized{#1}}
+		{
+		\str_case_e:nnF~{#1}
+		{
+			{en}{
+			~Remade~a~Web~Application~originally~made~with~Microsoft~Silverlight~to~Node.js~with~REST~API~reverse~engineering~(because~the~lack~of~documentation)
+			\str_case_e:nnF~{#2}
+				{
+				{dev}{~\\Detailed~achievements:~\\
+				-~Improving~WebApp~offering~Microsoft~Exchange~Service~Support~and~Integration~like~other~newer~Company’s~products.~\\
+				-~Redesign~Front~Page.~\\
+				-~RPM~Packing~and~init.d~configuration}
+				{gamedev}{}
+			}{[null]}%
+			}
+			{es}{Rehacer~una~Aplicacion~Web~originalmente~hecha~con~Microsoft~Silverlight~a~Node.js~haciendo~ingeniería~inversa~por~falta~de~documentación
+			\str_case_e:nnF~{#2}
+			{
+				{dev}{Detailed~achievements:~\\
+				-~Mejorar~la~aplicación~web~ofreciendo~soporte~e~integración~de~Microsoft~Exchange~como~otros~productos~mas~nuevos~de~la~compañía.\\
+				-~Re-diseño~la~Web.~\\
+				-~Empaquetamiento~por~RPM~y~creación~de~script~init.d~para~su~ejecución}
+				{gamedev}{}
+			}{[null]}%
+			}
+		}{[null]}%
+\\
+		\texttt{Node.js}\slashsep\texttt{JS/ECMA6+}\slashsep\texttt{BootStrap}\slashsep\texttt{Microsoft~Exchange~Service}\slashsep\texttt{CentOS/RPM}}
+
+}
+
+\newcommand\WorkExperience_viewnext[2]{
+    	\entry
+		{2017\\\footnotesize{0.2~\GetYearsLocalized{#1}}}
+		{\str_case_e:nnF~{#1}
+		{
+			{en}{Trainee~Software~Developer}
+			{es}{Desarollador~de~Software~en~Practicas}
+		}{[null]}%
+		}
+		{Viewnext,~Caceres,~Spain~-~\GetOnSiteLocalized{#1}}
+		{\texttt{IBM~Websphere}\slashsep\texttt{IBM~MQ~Manager}\slashsep\texttt{ESQL}}
+}
+
+\ExplSyntaxOff

@@ -1,0 +1,56 @@
+
+\ExplSyntaxOn
+
+\newcommand\GetTitleLocalized[2]{		
+		\str_case_e:nnF~{#2}
+		{
+			{gamedev}{
+				\str_case_e:nnF~{#1}
+				{
+					{en}{Game~Developer}
+					{es}{Game~Developer}
+				}
+				{[null]}%
+				}
+			{dev}
+			{
+				\str_case_e:nnF~{#1}
+				{
+					{en}{Software~Developer}
+					{es}{Desarrollador~de~Software}
+				}
+				{[null]}%
+			}
+		}
+		{[null]}%
+	}
+
+\newcommand\GetYearsLocalized[1]{		
+		\str_case_e:nnF~{#1}
+		{
+			{en}{years}
+			{es}{años}
+		}
+		{[null]}%
+	}
+
+\newcommand\GetContributionLocalized[1]{		
+	\str_case_e:nnF~{#1}
+	{
+		{en}{Contribution}
+		{es}{Contribución}
+	}
+	{[null]}%
+}
+
+\newcommand\GetOnSiteLocalized[1]{
+		\str_case_e:nnF~{#1}
+		{
+			{en}{On-Site}
+			{es}{Presencial}
+		}
+		{[null]}%
+	}
+
+
+\ExplSyntaxOff
