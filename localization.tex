@@ -25,6 +25,16 @@
 		{[null]}%
 	}
 
+\newcommand\GetLocationLocalized[1]{		
+\str_case_e:nnF~{#1}
+	{
+		{en}{\textbf{Location:~}{El~Puerto~de~Santa~Maria~(Cádiz),~Spain}\\}
+		{es}{\textbf{Lugar:~}{El~Puerto~de~Santa~Maria~(Cádiz),~España}\\}
+	}
+	{[null]}%
+}
+
+
 \newcommand\GetYearsLocalized[1]{		
 		\str_case_e:nnF~{#1}
 		{
