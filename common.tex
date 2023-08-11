@@ -19,11 +19,10 @@
 
 \begin{entrylist}
 % Post-VRProject
-\project_webscrapper{#1}{#2}
 \str_case_e:nnF~{#2}
     {
-        {dev}{\project_Backlog{#1}{#2}}
-        {gamedev}{}
+        {dev}{\project_webscrapper{#1}{#2}\project_Backlog{#1}{#2}}
+        {gamedev}{\project_Tikpocalypse{#1}{#2}\project_webscrapper{#1}{#2}}
     }{[null]}%
 % End of Post-VRProject
 
@@ -52,8 +51,8 @@
 		{
 			{gamedev}
 			{
-				\course_unitylearn{#1}{#2}
 				\course_unrealUdemy{#1}{#2}
+				\course_unitylearn{#1}{#2}
 			}
 			{dev}
 			{
@@ -95,10 +94,10 @@
 		\str_case_e:nnF~{#1}
 		{
 			{en}{[EQF5]~HND-Equivalent~Studies~in~Multi-Platform~Applications~Development}
-			{es}{[FPGS]~Tecnico~Superior~en~Desarrollo~de~Aplicaciones~Multiplataformas}
+			{es}{[FPGS]~Técnico~Superior~en~Desarrollo~de~Aplicaciones~Multiplataformas}
 		}{[null]}%			
 		}
-		{I.E.S~Agora,~Caceres,~Spain~}
+		{I.E.S~Ágora,~Cáceres,~Spain~}
 		{
 		\str_case_e:nnF~{#1}
 			{
@@ -113,10 +112,10 @@
 		\str_case_e:nnF~{#1}
 		{
 			{en}{[ISCED3]~Vocational~education~in~IT~Technician~Studies}
-			{es}{[FPGM]~Tecnico~en~Sistemas~Microinformaticos~y~Redes}
+			{es}{[FPGM]~Técnico~en~Sistemas~Microinformáticos~y~Redes}
 		}{[null]}%
 		}
-		{Educatec,~Caceres,~Spain~}
+		{Educatec,~Cáceres,~Spain~}
 		{
 		\str_case_e:nnF~{#1}
 		{

@@ -17,8 +17,25 @@
 		{
 		\str_case_e:nnF~{#1}
 		{
-			{en}{-~Creation,~design,~refactoring~and~maintenance~of~Software~and~unit~tests~in~.NET~Framework,~Refactoring~and~migration~tasks~to~.NET~Standard/Core~for~old~and~new~projects~}
-			{es}{-~Creación,~diseño,~refactorización~y~mantenimiento~de~software~y~pruebas~unitarias~en~.NET~Framework~para~proyectos~antiguos~y~nuevos~ademas~de~tareas~de~migración~a~.NET~Standard/Core}
+			{en}{Creation,~design,~refactoring~and~maintenance~of~Software~and~unit~tests~in~.NET~Framework,~Refactoring~and~migration~tasks~to~.NET~Standard/Core~for~old~and~new~projects~}
+			{es}{Creación,~diseño,~refactorización~y~mantenimiento~de~software~y~pruebas~unitarias~en~.NET~Framework~para~proyectos~antiguos~y~nuevos~además~de~tareas~de~migración~a~.NET~Standard/Core}
+		}{[null]}%
+		\str_case_e:nnF~{#2}
+		{
+			{gamedev}{}
+			{dev}{
+				\str_case_e:nnF~{#1}
+				{
+					{en}{\\Achievements~Detailed:\\
+						~-~Development~of~modular~monitoring~and~alarm~services/daemons~. \\
+						~-~Development~of~tools~for~displaying~sales~graphics~in~the~web~administration~part.}
+					{es}{
+						\\Logros~Detallados:\\
+						~-~Desarrollo~de~servicios/daemon~de~monitorización~y~alarma~modular. \\
+						~-~Desarrollo~de~herramientas~de~visualizacion~de~graficos~de~ventas~en~la~parte~de~administracion~web.
+						}
+				}{[null]}%
+			}
 		}{[null]}%
 		\\
 		\texttt{C\#~\&~.Net~Framework}\slashsep\texttt{Microsoft~SQL~Server}\slashsep\texttt{Microsoft~Azure}\slashsep\texttt{JavaScript}
@@ -41,23 +58,21 @@
 		\str_case_e:nnF~{#1}
 		{
 			{en}{
-			~Remade~a~Web~Application~originally~made~with~Microsoft~Silverlight~to~Node.js~with~REST~API~reverse~engineering~(because~the~lack~of~documentation)
+			Remade~a~Web~Application~originally~made~with~Microsoft~Silverlight~to~Node.js~with~REST~API~reverse~engineering~(because~the~lack~of~documentation)~and~RPM~\&~init.d~Integration~(CentOS/Red~Hat)\\
 			\str_case_e:nnF~{#2}
 				{
-				{dev}{~\\Detailed~achievements:~\\
+				{dev}{Detailed~achievements:~\\
 				-~Improving~WebApp~offering~Microsoft~Exchange~Service~Support~and~Integration~like~other~newer~Company’s~products.~\\
-				-~Redesign~Front~Page.~\\
-				-~RPM~Packing~and~init.d~configuration}
+				-~Redesign~Front~Page.}
 				{gamedev}{}
 			}{[null]}%
 			}
-			{es}{Rehacer~una~Aplicacion~Web~originalmente~hecha~con~Microsoft~Silverlight~a~Node.js~haciendo~ingeniería~inversa~por~falta~de~documentación
+			{es}{Rehacer~una~Aplicación~Web~originalmente~hecha~con~Microsoft~Silverlight~a~Node.js~haciendo~ingeniería~inversa~por~falta~de~documentación~y~integracion~con~RPM~(CentOS/Red~Hat/Fedora)~y~init.d \\
 			\str_case_e:nnF~{#2}
 			{
-				{dev}{Detailed~achievements:~\\
-				-~Mejorar~la~aplicación~web~ofreciendo~soporte~e~integración~de~Microsoft~Exchange~como~otros~productos~mas~nuevos~de~la~compañía.\\
-				-~Re-diseño~la~Web.~\\
-				-~Empaquetamiento~por~RPM~y~creación~de~script~init.d~para~su~ejecución}
+				{dev}{Logros~detallados:~\\
+				-~Mejorar~la~aplicación~web~ofreciendo~soporte~e~integración~de~Microsoft~Exchange~como~otros~productos~más~nuevos~de~la~compañía.\\
+				-~Re-diseño~de~la~Web.}
 				{gamedev}{}
 			}{[null]}%
 			}
@@ -72,7 +87,7 @@
 		{\str_case_e:nnF~{#1}
 		{
 			{en}{Trainee~Software~Developer}
-			{es}{Desarollador~de~Software~en~Practicas}
+			{es}{Desarrollador~de~Software~en~Prácticas}
 		}{[null]}%
 		}
 		{Viewnext,~Caceres,~Spain~-~\GetOnSiteLocalized{#1}}

@@ -1,7 +1,7 @@
 \ExplSyntaxOn
 
 \newcommand\project_webscrapper[2]{
-    	\entry
+	\entry
 		{2023}
 		{WebScrappers~
 		\str_case_e:nnF~{#1}
@@ -15,7 +15,7 @@
 }
 
 \newcommand\project_Backlog[2]{
-    \entry
+	\entry
 		{2023}
 		{\href{\c__npkg_httpsprefix_tl github.com/gabuscuv/BacklogDatabase-Utils}{BacklogDatabase-Utils~(CLI)}~//~\href{\c__npkg_httpsprefix_tl github.com/gabuscuv/BeatenGames-Source}{BeatenGames~(Web)}~//~\href{\c__npkg_httpsprefix_tl github.com/gabuscuv/BeatenGamesService}{BeatenGamesService~(Daemon/Service)}}
 		{}
@@ -27,6 +27,34 @@
 			}{[null]}%
 			\\
 		~\texttt{ReactJS}\slashsep\texttt{Javascript}\slashsep\texttt{C\#}\slashsep\texttt{Entity~Framework~\&~LINQ}\slashsep\texttt{GRPC}}
+}
+
+
+\newcommand\project_Tikpocalypse[2]{
+\entry
+		{2023}
+		{\href{\c__npkg_httpsprefix_tl https://alexroivas.itch.io/tikpocalipsis}{Tikpocalypse}}
+		{FEET~Studio}
+		{
+			\str_case_e:nnF~{#1}
+			{
+				{en}{Responsible~for~architecture,~multimedia~integration,~programming~of~the~online~leaderboard~(Backend~\&~Frontend)~and~IT~Support,~A~Game~made~for~the~MalagaJam~XVI~Summer~Edition}
+				{es}{Encargado~de~Arquitectura,~integración~multimedia,~programación~de~la~tabla~de~puntuación~online~(Backend~\&~Frontend)~y~soporte~tecnico.~~Juego~realizado~para~la~MalagaJam~XVI~Summer~Edition}
+			}{[null]}%
+			\str_case_e:nnF~{#2}
+			{
+				{gamedev}{
+					\str_case_e:nnF~{#1}
+					{
+						{en}{}
+						{es}{}
+					}{[null]}%
+				}
+				{dev}{}
+			}{[null]}%
+		\\
+		~\texttt{Unity}\slashsep\texttt{C\#}\slashsep\texttt{FMOD}\slashsep\texttt{GRPC~(Feature~Ready)}\slashsep\texttt{ASP.NET~(Feature~Ready)}}
+
 }
 
 \newcommand\project_vrprojectandunrealrelated[2]{
@@ -42,15 +70,15 @@
 		\str_case_e:nnF~{#1}
 		{
 			{en}{Extracted/Rewritten~from~VRProject}
-			{es}{Extraidos/Re-Escritos~de~VRProject}
+			{es}{Extraídos/Re-Escritos~de~VRProject}
 		}{[null]}%
 		)}}
-		{Solo~Dev}
+		{SoloDev}
 		{
 		\str_case_e:nnF~{#1}
 			{
 				{en}{A~narrative~mystery~puzzle~VR~Game~with~virtual~augmented~reality~and~an~AI~companion}
-				{es}{Un~juego~de~realidad~virtual~de~misterio~narrativo~con~realidad~aumentada~(virtual),~con~un~IA~de~compañia~y~el~uso~de~Metahumans,~Ademas~de~otras~herramientas~para~su~desarrollo.}
+				{es}{Un~juego~de~realidad~virtual~de~misterio~narrativo~con~realidad~aumentada~(virtual),~con~un~IA~de~compañía~y~el~uso~de~Metahumans,~Además~de~otras~herramientas~para~su~desarrollo.}
 			}{[null]}%
 			~\\
 			\str_case_e:nnF~{#2}
@@ -58,7 +86,7 @@
 					{dev}{}
 					{gamedev}
 					{
-						-~\href{\c__npkg_httpsprefix_tl github.com/gabuscuv/CustomOpenXRControllerIntegration}{CustomOpenXRControllerIntegration}
+						-~\href{\c__npkg_httpsprefix_tl github.com/gabuscuv/CustomOpenXRControllerIntegration}{OpenXRControllerIntegration}
 						\str_case_e:nnF~{#1}
 						{
 							{en}{-~A~Unified~Highlight~Button~System~for~VRExpansion~\&~OpenXR}
@@ -69,7 +97,7 @@
 						-~\href{\c__npkg_httpsprefix_tl github.com/gabuscuv/AsyncMapFramework}{ASyncMapFramework}~
 						\str_case_e:nnF~{#1}
 						{
-							{en}{-~A~Set~of~Components~and~Interfaces~for~loading~maps~asynchronously~mainly~for~VR}
+							{en}{-~A~set~of~classes~\&~interfaces~for~loading~asynchronous~maps~mainly~for~VR}
 							{es}{-~Un~conjunto~de~clases~e~interfaces~para~cargar~mapas~asincrónicos~para~VR}
 						}{[null]}%
 						~\\
@@ -95,27 +123,27 @@
 			}{[null]}%
 		
 		}{}{
-			- ~2020:~ImGui~Tools/Game~Programmer~
+			-~~2020:~ImGui~Tools/Game~Programmer~
 			\str_case_e:nnF~{#1}
 			{
 				{en}{for~a~}
 				{es}{para~una~}
 			}{[null]}%
 			~GameJam~(Lua~\&~LOVE2D)\\
-			- ~2019:~
+			-~~2019:~
 			\str_case_e:nnF~{#1}
 			{
 				{en}{TestingGrounds++~:~Making~an~improved~version~of~the~last~exercise.~}
 				{es}{Crear~una~versión~mejorada~del~ultimo~ejercicio~del~curso~de~UE4}
 			}{[null]}%
-			(Unreal~E~4~\&~C++) \\
-			- ~2017:~
+			(Unreal~E~4~\&~C++)~\\
+			-~~2017:~
 			\str_case_e:nnF~{#1}
 			{
 				{en}{Final~degree~project~-~A~2D~Basic~Game~Engine~with~Editor~}
 				{es}{TFG:~Un~basico~Game~Engine~2D~con~Editor~}
 			}{[null]}%
-			
+
 			(C\#,~MonoGame/XNA~\&~WinForms)
 
 		}
