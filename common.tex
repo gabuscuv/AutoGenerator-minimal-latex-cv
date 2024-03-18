@@ -20,7 +20,9 @@
 \str_case_e:nnF~{#2}
     {
         {dev}{\project_webscrapper{#1}{#2}\project_Backlog{#1}{#2}}
-        {gamedev}{\project_Tikpocalypse{#1}{#2}\project_webscrapper{#1}{#2}}
+        {gamedev}{\project_Gamejams{#1}{#2}
+		%\project_webscrapper{#1}{#2}
+		}
     }{[null]}%
 % End of Post-VRProject
 
@@ -50,7 +52,7 @@
 			{gamedev}
 			{
 				\course_unrealUdemy{#1}{#2}
-				\course_unitylearn{#1}{#2}
+				%\course_unitylearn{#1}{#2}
 			}
 			{dev}
 			{
@@ -209,29 +211,29 @@
 			}{[null]}%
 			}
 		\\
-		\str_case_e:nnF~{#1}
-		{
-			{en}{-~Signed~up~in~\href{\c__npkg_httpsprefix_tl ec.europa.eu/social/main.jsp?catId=1036&langId=en}{"Youth~Guarantee"}}
-			{es}{-~Alta~en~Garantía~Juvenil~}
-		}{[null]}%
-		\\
+		%\str_case_e:nnF~{#1}
+		%{
+		%	{en}{-~Signed~up~in~\href{\c__npkg_httpsprefix_tl ec.europa.eu/social/main.jsp?catId=1036&langId=en}{"Youth~Guarantee"}}
+		%	{es}{-~Alta~en~Garantía~Juvenil~}
+		%}{[null]}%
+		%\\
 		\str_case_e:nnF~{#1}
 		{
 			{en}{-~Experience~working~in~International~Teams~and~on~remote}
 			{es}{-~Experiencia~trabajando~en~equipos~internacionales~(Anglo)~y~en~remoto~}
 		}{[null]}%
 		\\
-		\str_case_e:nnF~{#1}
-		{
-			{en}{-~Willing~to~relocate}
-			{es}{-~Libre~para~Relocalizacion~}
-		}{[null]}%
-		\\
-		\str_case_e:nnF~{#1}
-		{
-			{en}{-~Immediate~availability}
-			{es}{-~Disponibilidad~Inmediata}
-		}{[null]}%
+	%	\str_case_e:nnF~{#1}
+	%	{
+	%		{en}{-~Willing~to~relocate}
+	%		{es}{-~Libre~para~Relocalizacion~}
+	%	}{[null]}%
+	%	\\
+	%	\str_case_e:nnF~{#1}
+	%	{
+	%		{en}{-~Immediate~availability}
+	%		{es}{-~Disponibilidad~Inmediata}
+	%	}{[null]}%
 	\end{minipage}
 }
 
