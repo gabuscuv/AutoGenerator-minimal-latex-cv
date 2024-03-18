@@ -22,6 +22,7 @@
 %----------------------------------------------------------------------------------------
 
 \documentclass[9pt]{developercv} % Default font size, values from 8-12pt are recommended
+\usepackage{graphicx}
 
 %----------------------------------------------------------------------------------------
 
@@ -32,14 +33,31 @@
 %% Just For Debug, Run the Script for real results
 %\def \langsa {en} %% es == Spanish, en == English
 %\def \jobtype {dev} % dev == Developer, gamedev, == Game Developer
+%\def \photo {true} % false == withoutPhoto, true, == WithPhoto
 
 %----------------------------------------------------------------------------------------
 %	TITLE AND CONTACT INFORMATION
 %----------------------------------------------------------------------------------------
 
 \begin{minipage}[t]{0.45\textwidth} % 45% of the page width for name
+
 	\vspace{-\baselineskip} % Required for vertically aligning minipages
-	
+%% SPECIAL EDITION for a certain Spanish Company, That REQUIRES a profile photo, despite other countries It's forbidden... And All my one-page content optimization It goes to trash... Thanks...
+\ExplSyntaxOn
+
+\str_case_e:nnF~{\photo}
+{
+	{true}{
+			  \includegraphics[width=0.4\linewidth]{profile.png}
+		}
+	{false}{}
+}
+{[null]}%
+
+\ExplSyntaxOff
+
+
+
 	% If your name is very short, use just one of the lines below
 	% If your name is very long, reduce the font size or make the minipage wider and reduce the others proportionately
 	\colorbox{black}{{\huge\textcolor{white}{\textbf{\MakeUppercase{Gabriel}}}}} % First name
@@ -68,11 +86,14 @@
 	\textbf{Linkedin: }{\href{https://www.linkedin.com/in/gabuscuv/}{linkedin.com/in/gabuscuv/}}\\
 \end{minipage}
 
+
 \vspace{0.5cm}
 
 %----------------------------------------------------------------------------------------
 %	INTRODUCTION, SKILLS AND TECHNOLOGIES
 %----------------------------------------------------------------------------------------
+
+
 
 %----------------------------------------------------------------------------------------
 %	ADDITIONAL INFORMATION

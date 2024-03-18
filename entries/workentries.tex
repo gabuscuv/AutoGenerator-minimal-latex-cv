@@ -1,5 +1,50 @@
 \ExplSyntaxOn
 
+
+\newcommand\WorkExperience_abance[2]{
+	\entry
+		{2023-2024\\\footnotesize{0.7~\GetYearsLocalized{#1}}}
+		{
+		\str_case_e:nnF~{#1}
+		{
+			{en}{Lead~UE5~VR~\&~Tools~C\#~Developer}
+			{es}{Desarrollador~Full~stack}
+		}{[null]}%
+		}
+		
+		{\href{\c__npkg_httpsprefix_tl~www.abance.es/en/}{Abance~-~Global~Engineering},~Puerto~de~Santa~Maria,~Spain~-~Hybrid}
+		{
+		\str_case_e:nnF~{#1}
+		{
+			{en}{
+			Remade~a~Web~Application~originally~made~with~Microsoft~Silverlight~to~Node.js~with~REST~API~reverse~engineering~(because~the~lack~of~documentation)~and~RPM~\&~init.d~Integration~(CentOS/Red~Hat)\\
+			\str_case_e:nnF~{#2}
+				{
+				{dev}{
+				~-~Documentation/Filtering~Tool~(2024):~Excel~Parsing~(OpenXML),~\\
+				~-~Internal~VR~Tool~(2023-2024):~I/O,~Builds,~Pipeline(python,~Commandlet~and~In-Editor,OptionalRemotely)~automatizations,~Accesibility~Options,~Custom~Inspection~Tools.
+}
+				{gamedev}{
+				~-~Documentation/Filtering~Tool~(2024):~Excel~Parsing~(OpenXML),~\\
+				~-~Internal~VR~Tool~(2023-2024):~I/O,~Builds,~Pipeline(python,~Commandlet~and~In-Editor,OptionalRemotely)~automatizations,~Accesibility~Options,~Custom~Inspection~Tools.
+				}
+			}{[null]}%
+			}
+			{es}{Rehacer~una~Aplicación~Web~originalmente~hecha~con~Microsoft~Silverlight~a~Node.js~haciendo~ingeniería~inversa~por~falta~de~documentación~y~integracion~con~RPM~(CentOS/Red~Hat/Fedora)~y~init.d~\\
+			\str_case_e:nnF~{#2}
+			{
+				{dev}{Logros~detallados:~\\
+				-~Mejorar~la~aplicación~web~ofreciendo~soporte~e~integración~de~Microsoft~Exchange~como~otros~productos~más~nuevos~de~la~compañía.\\
+				-~Re-diseño~de~la~Web.}
+				{gamedev}{}
+			}{[null]}%
+			}
+		}{[null]}%
+		\\\texttt{Unreal~Engine~5}\slashsep\texttt{C++17}\slashsep\texttt{C\#~\&~.NET}\slashsep\texttt{Microsoft~Exchange~Service}\slashsep\texttt{CentOS/RPM}}
+
+}
+
+
 \newcommand\WorkExperience_itixo[2]{
 	\entry
 		{2018~--~2020\\\footnotesize{2.5~\GetYearsLocalized{#1}}}
@@ -27,11 +72,11 @@
 				\str_case_e:nnF~{#1}
 				{
 					{en}{\\Detailed~Achievements:\\
-						~-~Development~of~modular~monitoring~and~alarm~services/daemons~. \\
+						~-~Development~of~modular~monitoring~and~alarm~services/daemons~.~\\
 						~-~Development~of~tools~for~displaying~sales~graphics~in~the~web~administration~part.}
 					{es}{
 						\\Logros~Detallados:\\
-						~-~Desarrollo~de~servicios/daemon~de~monitorización~y~alarma~modular. \\
+						~-~Desarrollo~de~servicios/daemon~de~monitorización~y~alarma~modular.~\\
 						~-~Desarrollo~de~herramientas~de~visualizacion~de~graficos~de~ventas~en~la~parte~de~administracion~web.
 						}
 				}{[null]}%
@@ -67,7 +112,7 @@
 				{gamedev}{}
 			}{[null]}%
 			}
-			{es}{Rehacer~una~Aplicación~Web~originalmente~hecha~con~Microsoft~Silverlight~a~Node.js~haciendo~ingeniería~inversa~por~falta~de~documentación~y~integracion~con~RPM~(CentOS/Red~Hat/Fedora)~y~init.d \\
+			{es}{Rehacer~una~Aplicación~Web~originalmente~hecha~con~Microsoft~Silverlight~a~Node.js~haciendo~ingeniería~inversa~por~falta~de~documentación~y~integracion~con~RPM~(CentOS/Red~Hat/Fedora)~y~init.d~\\
 			\str_case_e:nnF~{#2}
 			{
 				{dev}{Logros~detallados:~\\
@@ -77,7 +122,7 @@
 			}{[null]}%
 			}
 		}{[null]}%
-		\\ \texttt{Node.js}\slashsep\texttt{JS/ECMA6+}\slashsep\texttt{BootStrap}\slashsep\texttt{Microsoft~Exchange~Service}\slashsep\texttt{CentOS/RPM}}
+		~\texttt{Node.js}\slashsep\texttt{JS/ECMA6+}\slashsep\texttt{BootStrap}\slashsep\texttt{Microsoft~Exchange~Service}\slashsep\texttt{CentOS/RPM}}
 
 }
 

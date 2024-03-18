@@ -7,8 +7,6 @@
 
 \tl_const:Nx\c__npkg_httpsprefix_tl{https\char_generate:nn{58}{12}//}
 
-
-
 \newcommand\Projects[2]{
 \cvsect{\str_case_e:nnF~{#1}
 	{
@@ -56,9 +54,10 @@
 			}
 			{dev}
 			{
-				\course_ccnaTwo{#1}{#2}
+				%\course_ccnaTwo{#1}{#2}
 			}
 		}{[null]}%
+		\course_ccnaTwo{#1}{#2}
 		\course_photoshopcsThree{#1}{#2}
 	\end{entrylist}
 }
@@ -72,6 +71,8 @@
 }
 
 \begin{entrylist}
+	
+	\WorkExperience_abance{#1}{#2}
 	\WorkExperience_itixo{#1}{#2}
 	\WorkExperience_knowledgemill{#1}{#2}
 	\WorkExperience_viewnext{#1}{#2}
