@@ -35,4 +35,4 @@ done
 
 rm *.aux *.log *.out *.gz
 
-cp output/* $HOME/git/gabuscuv-portfolio/public/d/
+cp output/* $HOME/git/gabuscuv-misc/resume/

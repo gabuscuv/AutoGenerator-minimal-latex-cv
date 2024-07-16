@@ -13,7 +13,14 @@
 		{en}{Projects}
 		{es}{Proyectos}
 	}{[null]}%
-	}
+	}{
+		~\str_case_e:nnF~{#2}
+	{
+		{gamedev}{(6~\str_case_e:nnF~{#1}{{en}{of} {es}{de}}{[null]}~16~\str_case_e:nnF~{#1}{{en}{projects} {es}{proyectos}}{[null]})~}
+		{dev}{(7~of~19~projects)~}
+	}{[null]}%
+		~-~\href{\c__npkg_httpsprefix_tl gabuscuv.dev/en/Projects}{\textit{\MoreInfoLocalized{#1}}}
+		}
 
 \begin{entrylist}
 % Post-VRProject
@@ -32,7 +39,9 @@
 \str_case_e:nnF~{#2}
     {
         {dev}{}
-        {gamedev}{\project_gamedevmisc{#1}{#2}}
+        {gamedev}{
+			%\project_gamedevmisc{#1}{#2}
+			}
     }{[null]}%
 
 \end{entrylist}
@@ -45,7 +54,7 @@
 		{en}{Courses}
 		{es}{Cursos}
 	}{[null]}%
-		}
+		}{}
 	\begin{entrylist}
 		\str_case_e:nnF~{#2}
 		{
@@ -69,18 +78,49 @@
 {
 	{en}{Work~Experience}
 	{es}{Experiencia~Laboral}
-}{[null]}%]
-}
+}{[null]}%
+}{(
+		\str_case_e:nnF~{#2}{
+			{dev}{2~} 
+			{gamedev}{2~}}{[null]}
+		\NexusLocalized{#1}
+		~4~
+		\str_case_e:nnF~{#1}{
+			{en}{Companies~} 
+			{es}{Compañias~}
+			}{[null]}		
+		~-~
+		\str_case_e:nnF~{#2}{
+			{dev}{4~} 
+			{gamedev}{3~}
+			}{[null]}
+		\NexusLocalized{#1}
+		~8~
+		\str_case_e:nnF~{#1}{
+			{en}{Job~Positions} 
+			{es}{Posiciones~de~Trabajo}}
+			{[null]}
+		)~
+	~-~3.71~\GetYearsLocalized{#1}~-~\href{\c__npkg_httpsprefix_tl gabuscuv.dev/en/Resume}{\textit{\MoreInfoLocalized{#1}}
+	}
+	}
+	
 
 \begin{entrylist}
-	
+\str_case_e:nnF~{#2}
+{
+	{gamedev}{\WorkExperience_abance{#1}{#2}
+	\WorkExperience_itixo{#1}{#2}}
+	{dev}{
 	\WorkExperience_abance{#1}{#2}
 	\WorkExperience_itixo{#1}{#2}
-	\WorkExperience_knowledgemill{#1}{#2}
-	\WorkExperience_viewnext{#1}{#2}
+	%\WorkExperience_knowledgemill{#1}{#2}
+	%\WorkExperience_viewnext{#1}{#2}
+	}
+}{[null]}%
+
 \end{entrylist}
 }
-
 
 \newcommand\Education[2]{
 \cvsect{\str_case_e:nnF~{#1}
@@ -88,7 +128,7 @@
 	{en}{Education}
 	{es}{Educacion}
 }{[null]}%]
-}
+}{}
 
 \begin{entrylist}
 	\entry
@@ -139,14 +179,14 @@
 			{en}{Main~Technologies}
 			{es}{Principales~Tecnologías}
 		}{[null]}%	
-		}\\
+		}{}
 		\textbf{
 			\str_case_e:nnF~{#1}
 			{
 				{en}{Programming~Languages:~}
 				{es}{Lenguajes~de~Programación:~}
 			}{[null]}%
-			}\\~C\#,~C++,~Javascript~\\
+			}\\~C\#,~C++,~Javascript/Typescript\\
 		\str_case_e:nnF~{#2}
 		{
 			{gamedev}{	
@@ -191,7 +231,7 @@
 				{es}{\GetContributionLocalized{#1}es~}
 			}{[null]}%
 			\&~Forks
-			}	
+			}{}	
 		\\
 		~Valve~/~Steam~Audio~(Python)\\~\href{\c__npkg_httpsprefix_tl github.com/ValveSoftware/steam-audio/pull/259}{\textit{\GetContributionLocalized{#1}}}~\\~
 		~jameslieu~/~howlongtobeat~(C\#)\\~\href{\c__npkg_httpsprefix_tl github.com/jameslieu/howlongtobeat/pull/7}{\textit{\GetContributionLocalized{#1}}}~\\
@@ -209,7 +249,7 @@
 				{en}{Additional~Information}
 				{es}{Información~Adicional}
 			}{[null]}%
-			}
+			}{}
 		\\
 		%\str_case_e:nnF~{#1}
 		%{
@@ -219,10 +259,21 @@
 		%\\
 		\str_case_e:nnF~{#1}
 		{
-			{en}{-~Experience~working~in~International~Teams~and~on~remote}
-			{es}{-~Experiencia~trabajando~en~equipos~internacionales~(Anglo)~y~en~remoto~}
+			{en}{Experience~working~in~International~Teams~and~on~remote}
+			{es}{Experiencia~trabajando~en~equipos~internacionales~(Anglo)~y~en~remoto}
 		}{[null]}%
 		\\
+		\str_case_e:nnF~{#1}
+		{
+			{en}{Recurring~\&~Active~Member~of~Cádiz~GameDev}
+			{es}{Miembro~Recurrente~y~activo~de~la~Cádiz~GameDev}
+		}{[null]}%
+		\\
+		\str_case_e:nnF~{#1}
+		{
+			{en}{I~have~30\%~of~deafness~(I~am~using~Hearing~Aids)}
+			{es}{Tengo~un~30\%~de~sordera~(Estoy~usando~audifonos)}
+		}{[null]}%
 	%	\str_case_e:nnF~{#1}
 	%	{
 	%		{en}{-~Willing~to~relocate}

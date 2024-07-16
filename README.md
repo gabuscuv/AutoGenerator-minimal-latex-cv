@@ -8,7 +8,7 @@ Minimal CV template using LaTeX.
 
 ## Authors
 
-* **Gabriel Bustillo del Cuvillo** <[**gabibust@gmail.com**](mailto:gabibust@gmail.com)>
+* **Gabriel Bustillo del Cuvillo** <[**me@gabuscuv.dev**](mailto:me@gabuscuv.dev)>
 * **Jan Vorisek** <[**jan@vorisek.me**](mailto:jan@vorisek.me)>
 
 Based on CV by [**Jan Küster**](https://github.com/jankapunkt). See his [*original work*](https://github.com/jankapunkt/latexcv).
