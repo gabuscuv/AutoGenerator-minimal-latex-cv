@@ -2,6 +2,7 @@
 \input{entries/workentries.tex}
 \input{entries/projectsentries.tex}
 \input{entries/coursesentries.tex}
+\input{entries/maintechnologies.tex}
 
 \ExplSyntaxOn
 
@@ -17,8 +18,8 @@
 		~\str_case_e:nnF~{#2}
 	{
 		{gamedev}{(6~\str_case_e:nnF~{#1}{{en}{of} {es}{de}}{[null]}~16~\str_case_e:nnF~{#1}{{en}{projects} {es}{proyectos}}{[null]})~}
-		{dev}{(7~of~19~projects)~}
-	}{[null]}%
+		{dev}{(4~\str_case_e:nnF~{#1}{{en}{of} {es}{de}}{[null]}~16~\str_case_e:nnF~{#1}{{en}{projects} {es}{proyectos}}{[null]})~}
+	}{(4~\str_case_e:nnF~{#1}{{en}{of} {es}{de}}{[null]}~16~\str_case_e:nnF~{#1}{{en}{projects} {es}{proyectos}}{[null]})~}%
 		~-~\href{\c__npkg_httpsprefix_tl gabuscuv.dev/en/Projects}{\textit{\MoreInfoLocalized{#1}}}
 		}
 
@@ -26,11 +27,17 @@
 % Post-VRProject
 \str_case_e:nnF~{#2}
     {
-        {dev}{\project_webscrapper{#1}{#2}\project_Backlog{#1}{#2}}
+        {dev}{
+			\project_webscrapper{#1}{#2}
+			%\project_Backlog{#1}{#2}
+			}
         {gamedev}{\project_Gamejams{#1}{#2}
 		%\project_webscrapper{#1}{#2}
 		}
-    }{[null]}%
+    }{
+		\project_webscrapper{#1}{#2}
+		%\project_Backlog{#1}{#2}
+		}%
 % End of Post-VRProject
 
 \project_vrprojectandunrealrelated{#1}{#2}
@@ -42,7 +49,7 @@
         {gamedev}{
 			%\project_gamedevmisc{#1}{#2}
 			}
-    }{[null]}%
+    }{}%
 
 \end{entrylist}
 }
@@ -67,7 +74,7 @@
 			{
 				%\course_ccnaTwo{#1}{#2}
 			}
-		}{[null]}%
+		}{}%
 		\course_ccnaTwo{#1}{#2}
 		\course_photoshopcsThree{#1}{#2}
 	\end{entrylist}
@@ -81,8 +88,8 @@
 }{[null]}%
 }{(
 		\str_case_e:nnF~{#2}{
-			{dev}{2~} 
-			{gamedev}{2~}}{[null]}
+			{gamedev}{2~}
+			}{3~}
 		\NexusLocalized{#1}
 		~4~
 		\str_case_e:nnF~{#1}{
@@ -91,17 +98,18 @@
 			}{[null]}		
 		~-~
 		\str_case_e:nnF~{#2}{
-			{dev}{4~} 
-			{gamedev}{3~}
-			}{[null]}
+			{backend}{6~}
+			{dev}{7~}
+			{gamedev}{4~}
+			}{6~}
 		\NexusLocalized{#1}
-		~8~
+		~9~
 		\str_case_e:nnF~{#1}{
 			{en}{Job~Positions} 
 			{es}{Posiciones~de~Trabajo}}
 			{[null]}
 		)~
-	~-~3.71~\GetYearsLocalized{#1}~-~\href{\c__npkg_httpsprefix_tl gabuscuv.dev/en/Resume}{\textit{\MoreInfoLocalized{#1}}
+	~-~4.07~\GetYearsLocalized{#1}~-~\href{\c__npkg_httpsprefix_tl gabuscuv.dev/en/Resume}{\textit{\MoreInfoLocalized{#1}}
 	}
 	}
 	
@@ -111,10 +119,22 @@
 {
 	{gamedev}{\WorkExperience_abance{#1}{#2}
 	\WorkExperience_itixo{#1}{#2}}
+	{backend}{
+		\WorkExperience_abance{#1}{#2}
+		\WorkExperience_itixo{#1}{#2}
+		\WorkExperience_knowledgemill{#1}{#2}
+		%\WorkExperience_viewnext{#1}{#2}
+		}
+	{webdev}{
+	\WorkExperience_abance{#1}{#2}
+	\WorkExperience_itixo{#1}{#2}
+	\WorkExperience_knowledgemill{#1}{#2}
+	%\WorkExperience_viewnext{#1}{#2}
+	}
 	{dev}{
 	\WorkExperience_abance{#1}{#2}
 	\WorkExperience_itixo{#1}{#2}
-	%\WorkExperience_knowledgemill{#1}{#2}
+	\WorkExperience_knowledgemill{#1}{#2}
 	%\WorkExperience_viewnext{#1}{#2}
 	}
 }{[null]}%
@@ -170,122 +190,6 @@
 \end{entrylist}
 }
 
-\newcommand\MainTechnologies[2]{
-	\begin{minipage}[t]{0.3\textwidth}
-		\vspace{-\baselineskip}~%~Required~for~vertically~aligning~minipages
-		\cvsect{
-		\str_case_e:nnF~{#1}
-		{
-			{en}{Main~Technologies}
-			{es}{Principales~Tecnologías}
-		}{[null]}%	
-		}{}
-		\textbf{
-			\str_case_e:nnF~{#1}
-			{
-				{en}{Programming~Languages:~}
-				{es}{Lenguajes~de~Programación:~}
-			}{[null]}%
-			}\\~C\#,~C++,~Javascript/Typescript\\
-		\str_case_e:nnF~{#2}
-		{
-			{gamedev}{	
-				\textbf{Engine:}~Unreal~Engine\\
-				\textbf{Middleware:}~FMOD,~Dear~ImGui}
-			{dev}{		
-				\textbf{\str_case_e:nnF~{#1}
-				{
-					{en}{Databases:}
-					{es}{Base~de~Datos:}
-				}{[null]}%
-					}~MySQL/MariaDB,~Microsoft~SQL~Server,~SQLite~\\
-				\textbf{
-				\str_case_e:nnF~{#1}
-					{
-						{en}{Operating~Systems:}
-						{es}{Sistemas~Operativos:}
-					}{[null]}%
-					}~Red~Hat-like,~Debian-Like,
-			macOS,~Windows~}
-		}{[null]}%
-		\\
-		\textbf{
-			\str_case_e:nnF~{#1}
-			{
-				{en}{Tools:}
-				{es}{Herramientas:}
-			}{[null]}%
-			}~Visual~Studio~(Code),~Git~,~Photoshop~\&~Gimp
-	\end{minipage}
-}
 
-\newcommand\ContributonsAndForks[2]
-{
-	\begin{minipage}[t]{0.3\textwidth}
-		\vspace{-\baselineskip}~%~Required~for~vertically~aligning~minipages
-		
-		\cvsect{
-			\str_case_e:nnF~{#1}
-			{
-				{en}{\GetContributionLocalized{#1}s~}
-				{es}{\GetContributionLocalized{#1}es~}
-			}{[null]}%
-			\&~Forks
-			}{}	
-		\\
-		~Valve~/~Steam~Audio~(Python)\\~\href{\c__npkg_httpsprefix_tl github.com/ValveSoftware/steam-audio/pull/259}{\textit{\GetContributionLocalized{#1}}}~\\~
-		~jameslieu~/~howlongtobeat~(C\#)\\~\href{\c__npkg_httpsprefix_tl github.com/jameslieu/howlongtobeat/pull/7}{\textit{\GetContributionLocalized{#1}}}~\\
-		~nowrep~/~obs-vkcapture~(C)\\~\textit{\href{\c__npkg_httpsprefix_tl github.com/gabuscuv/obs-vkcapture}{Fork}~\&~\href{\c__npkg_httpsprefix_tl github.com/nowrep/obs-vkcapture/pull/142}{\GetContributionLocalized{#1}}}~\\
-	\end{minipage}
-}
-
-\newcommand\AdditionalInformation[2]{
-	\begin{minipage}[t]{0.21\textwidth}
-		\vspace{-\baselineskip}~%~Required~for~vertically~aligning~minipages
-		
-		\cvsect{
-			\str_case_e:nnF~{#1}
-			{
-				{en}{Additional~Information}
-				{es}{Información~Adicional}
-			}{[null]}%
-			}{}
-		\\
-		%\str_case_e:nnF~{#1}
-		%{
-		%	{en}{-~Signed~up~in~\href{\c__npkg_httpsprefix_tl ec.europa.eu/social/main.jsp?catId=1036&langId=en}{"Youth~Guarantee"}}
-		%	{es}{-~Alta~en~Garantía~Juvenil~}
-		%}{[null]}%
-		%\\
-		\str_case_e:nnF~{#1}
-		{
-			{en}{Experience~working~in~International~Teams~and~on~remote}
-			{es}{Experiencia~trabajando~en~equipos~internacionales~(Anglo)~y~en~remoto}
-		}{[null]}%
-		\\
-		\str_case_e:nnF~{#1}
-		{
-			{en}{Recurring~\&~Active~Member~of~Cádiz~GameDev}
-			{es}{Miembro~Recurrente~y~activo~de~la~Cádiz~GameDev}
-		}{[null]}%
-		\\
-		\str_case_e:nnF~{#1}
-		{
-			{en}{I~have~30\%~of~deafness~(I~am~using~Hearing~Aids)}
-			{es}{Tengo~un~30\%~de~sordera~(Estoy~usando~audifonos)}
-		}{[null]}%
-	%	\str_case_e:nnF~{#1}
-	%	{
-	%		{en}{-~Willing~to~relocate}
-	%		{es}{-~Libre~para~Relocalizacion~}
-	%	}{[null]}%
-	%	\\
-	%	\str_case_e:nnF~{#1}
-	%	{
-	%		{en}{-~Immediate~availability}
-	%		{es}{-~Disponibilidad~Inmediata}
-	%	}{[null]}%
-	\end{minipage}
-}
 
 \ExplSyntaxOff

@@ -4,7 +4,7 @@ NAME="BustilloDelCuvilloGabriel"
 
 NAMEFILE="minimal-latex-cv";
 LANGS="es en";
-JOBTYPES="dev gamedev";
+JOBTYPES="dev gamedev backend webdev";
 
 getResumeLocalized()
 {

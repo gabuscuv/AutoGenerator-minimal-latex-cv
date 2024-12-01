@@ -12,17 +12,32 @@
 				}
 				{[null]}%
 				}
-			{dev}
+			{backend}
 			{
 				\str_case_e:nnF~{#1}
 				{
-					{en}{Software~Developer}
-					{es}{Desarrollador~de~Software}
+					{en}{Backend~Developer}
+					{es}{Desarrollador~de~Backend}
+				}
+				{[null]}%
+			}
+			{webdev}
+			{
+				\str_case_e:nnF~{#1}
+				{
+					{en}{Full~Stack~Web~Developer}
+					{es}{Desarrollador~Web~Full~Stack}
 				}
 				{[null]}%
 			}
 		}
+		{\str_case_e:nnF~{#1}
+		{
+			{en}{Software~Developer}
+			{es}{Desarrollador~de~Software}
+		}
 		{[null]}%
+		}%
 	}
 
 \newcommand\OnGoingLocalized[1]{		
@@ -52,13 +67,15 @@
 	{[null]}%
 }
 
-\newcommand\MoreInfoLocalized[1]{		
+\newcommand\MoreInfoLocalized[1]{
+	\color{blue}\underline{		
 		\str_case_e:nnF~{#1}
 		{
 			{en}{More~Information}
 			{es}{Más~Informacion}
 		}
 		{[null]}%
+	}
 	}
 
 \newcommand\GetYearsLocalized[1]{		
@@ -70,13 +87,15 @@
 		{[null]}%
 	}
 
-\newcommand\GetContributionLocalized[1]{		
+\newcommand\GetContributionLocalized[1]{
+	{
 	\str_case_e:nnF~{#1}
 	{
 		{en}{Contribution}
 		{es}{Contribución}
 	}
 	{[null]}%
+	}
 }
 
 \newcommand\GetOnSiteLocalized[1]{
