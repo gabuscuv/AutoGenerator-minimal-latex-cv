@@ -20,7 +20,7 @@
 		{gamedev}{(6~\str_case_e:nnF~{#1}{{en}{of} {es}{de}}{[null]}~16~\str_case_e:nnF~{#1}{{en}{projects} {es}{proyectos}}{[null]})~}
 		{dev}{(4~\str_case_e:nnF~{#1}{{en}{of} {es}{de}}{[null]}~16~\str_case_e:nnF~{#1}{{en}{projects} {es}{proyectos}}{[null]})~}
 	}{(4~\str_case_e:nnF~{#1}{{en}{of} {es}{de}}{[null]}~16~\str_case_e:nnF~{#1}{{en}{projects} {es}{proyectos}}{[null]})~}%
-		~-~\href{\c__npkg_httpsprefix_tl gabuscuv.dev/en/Projects}{\textit{\MoreInfoLocalized{#1}}}
+		~-~8~\GetYearsLocalized{#1}~-~\href{\c__npkg_httpsprefix_tl gabuscuv.dev/en/Projects}{~\textit{\MoreInfoLocalized{#1}}}
 		}
 
 \begin{entrylist}
@@ -89,9 +89,9 @@
 }{(
 		\str_case_e:nnF~{#2}{
 			{gamedev}{2~}
-			}{3~}
+			}{4~}
 		\NexusLocalized{#1}
-		~4~
+		~5~
 		\str_case_e:nnF~{#1}{
 			{en}{Companies~} 
 			{es}{Compañias~}
@@ -103,13 +103,13 @@
 			{gamedev}{4~}
 			}{6~}
 		\NexusLocalized{#1}
-		~9~
+		~10~
 		\str_case_e:nnF~{#1}{
 			{en}{Job~Positions} 
 			{es}{Posiciones~de~Trabajo}}
 			{[null]}
 		)~
-	~-~4.07~\GetYearsLocalized{#1}~-~\href{\c__npkg_httpsprefix_tl gabuscuv.dev/en/Resume}{\textit{\MoreInfoLocalized{#1}}
+	~-~5~\GetYearsLocalized{#1}~-~\href{\c__npkg_httpsprefix_tl gabuscuv.dev/en/Resume}{\textit{\MoreInfoLocalized{#1}}
 	}
 	}
 	
@@ -120,6 +120,7 @@
 	{gamedev}{\WorkExperience_abance{#1}{#2}
 	\WorkExperience_itixo{#1}{#2}}
 	{backend}{
+		\WorkExperience_ghenova{#1}{#2}
 		\WorkExperience_abance{#1}{#2}
 		\WorkExperience_itixo{#1}{#2}
 		\WorkExperience_knowledgemill{#1}{#2}
@@ -132,6 +133,7 @@
 	%\WorkExperience_viewnext{#1}{#2}
 	}
 	{dev}{
+	\WorkExperience_ghenova{#1}{#2}
 	\WorkExperience_abance{#1}{#2}
 	\WorkExperience_itixo{#1}{#2}
 	\WorkExperience_knowledgemill{#1}{#2}
