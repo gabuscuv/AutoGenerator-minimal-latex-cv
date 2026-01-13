@@ -3,8 +3,9 @@
 NAME="BustilloDelCuvilloGabriel"
 
 NAMEFILE="minimal-latex-cv";
-LANGS="es en";
-JOBTYPES="dev gamedev backend webdev";
+LANGS=${CUSTOMLANG:-"en es"};
+JOBTYPES=${JOBTYPE:-"dev gamedev backend webdev embeddedsystem"};
+NOCUTPAGES=${NOCUTPAGES:-0}
 
 getResumeLocalized()
 {
@@ -29,7 +30,12 @@ do
     for LANG in $LANGS
     do
         pdflatex -synctex=1 -interaction=nonstopmode '\def \langsa {'$LANG'} \def \jobtype {'$JOBTYPE'} \input{'$NAMEFILE'.tex}'
-        qpdf $NAMEFILE.pdf --pages . 1 -- $PWD/output/`getResumeLocalized $LANG`-$NAME-$LANG-$JOBTYPE.pdf
+        if [ "$NOCUTPAGES" -eq 1 ];then
+            mv $NAMEFILE.pdf $PWD/output/`getResumeLocalized $LANG`-$NAME-$LANG-$JOBTYPE.pdf
+        else
+            qpdf $NAMEFILE.pdf --pages . 1 -- $PWD/output/`getResumeLocalized $LANG`-$NAME-$LANG-$JOBTYPE.pdf
+        fi
+        
     done
 done
 

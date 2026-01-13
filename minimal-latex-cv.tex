@@ -21,21 +21,49 @@
 %	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
 %----------------------------------------------------------------------------------------
 
-\documentclass[9pt]{developercv} % Default font size, values from 8-12pt are recommended
+%% Just For Debug, Run the Script for real results
+%\def \langsa {en} %% es == Spanish, en == English
+%\def \jobtype {backend}
+%\def \photo {false}
+%\def \removeSideBars{false}
+
+\documentclass[9pt]{developercv}
+
+\ExplSyntaxOn
+
+\def \langaa{\str_case_e:nnF~{\langsa}{{es}{}}{english}}
+
+\ExplSyntaxOff
+
+\usepackage[\langaa]{babel}
+\usepackage[\langaa]{datetime2}
 \usepackage{graphicx}
 \usepackage{xcolor}
 
-%----------------------------------------------------------------------------------------
+% Language switc
+% Date format
+\DTMnewstyle{yymmdd}{%
+\renewcommand*\DTMdisplaydate[4]{%
+\DTMtwodigits{##1}\DTMtwodigits{##2}\DTMtwodigits{##3}% 
+}
+\renewcommand*{\DTMDisplaydate}{\DTMdisplaydate}%
+}
+{}{}{}
+
+\newcommand{\daymonthyearsep}{~}    % define the separator
+
+\DTMnewstyle{ddmmyyyyx}{%
+\renewcommand*\DTMdisplaydate[4]{%
+\DTMtwodigits{##3}\daymonthyearsep\DTMtwodigits{##2}\daymonthyearsep\number##1%
+}%
+\renewcommand*{\DTMDisplaydate}{\DTMdisplaydate}%
+}
+{}{}{}  
+
 
 \begin{document}
 
 \input{common.tex}
-%\input{functions/utils.tex}
-
-%% Just For Debug, Run the Script for real results
-%\def \langsa {es} %% es == Spanish, en == English
-%\def \jobtype {webdev} % dev == Developer, gamedev, == Game Developer
-\def \photo {false} % false == withoutPhoto, true, == WithPhoto
 
 %----------------------------------------------------------------------------------------
 %	TITLE AND CONTACT INFORMATION
@@ -100,29 +128,26 @@
 %	ADDITIONAL INFORMATION
 %----------------------------------------------------------------------------------------
 
+\ExplSyntaxOn
+
+\str_case_e:nnF~{\removeSideBars}
+{
+	{true}{}
+}
+{
 \MainTechnologies{\langsa}{\jobtype}
 \hfill
 \ContributonsAndForks{\langsa}{\jobtype}
 \hfill
 \AdditionalInformation{\langsa}{\jobtype}
+}%
+\ExplSyntaxOff
 
 %----------------------------------------------------------------------------------------
 %	EXPERIENCE
 %----------------------------------------------------------------------------------------
-\ExplSyntaxOn
-
-\str_case_e:nnF~{\jobtype}
-{
-	{gamedev}{
-		\Projects{\langsa}{\jobtype}
-		\JobExperience{\langsa}{\jobtype}
-		}
-}{
 \JobExperience{\langsa}{\jobtype}	
 \Projects{\langsa}{\jobtype}
-}%
-
-\ExplSyntaxOff
 
 %----------------------------------------------------------------------------------------
 %	EDUCATION
@@ -131,6 +156,7 @@
 \Education{\langsa}{\jobtype}
 
 \Courses{\langsa}{\jobtype}
+\Talks{\langsa}{\jobtype}
 
 %----------------------------------------------------------------------------------------
 
