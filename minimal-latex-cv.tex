@@ -21,21 +21,49 @@
 %	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
 %----------------------------------------------------------------------------------------
 
-\documentclass[9pt]{developercv} % Default font size, values from 8-12pt are recommended
+%% Just For Debug, Run the Script for real results
+%\def \langsa {en} %% es == Spanish, en == English
+%\def \jobtype {backend}
+%\def \photo {false}
+%\def \removeSideBars{false}
+
+\documentclass[9pt]{developercv}
+
+\ExplSyntaxOn
+
+\def \langaa{\str_case_e:nnF~{\langsa}{{es}{}}{english}}
+
+\ExplSyntaxOff
+
+\usepackage[\langaa]{babel}
+\usepackage[\langaa]{datetime2}
 \usepackage{graphicx}
 \usepackage{xcolor}
 
-%----------------------------------------------------------------------------------------
+% Language switc
+% Date format
+\DTMnewstyle{yymmdd}{%
+\renewcommand*\DTMdisplaydate[4]{%
+\DTMtwodigits{##1}\DTMtwodigits{##2}\DTMtwodigits{##3}% 
+}
+\renewcommand*{\DTMDisplaydate}{\DTMdisplaydate}%
+}
+{}{}{}
+
+\newcommand{\daymonthyearsep}{~}    % define the separator
+
+\DTMnewstyle{ddmmyyyyx}{%
+\renewcommand*\DTMdisplaydate[4]{%
+\DTMtwodigits{##3}\daymonthyearsep\DTMtwodigits{##2}\daymonthyearsep\number##1%
+}%
+\renewcommand*{\DTMDisplaydate}{\DTMdisplaydate}%
+}
+{}{}{}  
+
 
 \begin{document}
 
 \input{common.tex}
-%\input{functions/utils.tex}
-
-%% Just For Debug, Run the Script for real results
-%\def \langsa {es} %% es == Spanish, en == English
-%\def \jobtype {webdev} % dev == Developer, gamedev, == Game Developer
-\def \photo {false} % false == withoutPhoto, true, == WithPhoto
 
 %----------------------------------------------------------------------------------------
 %	TITLE AND CONTACT INFORMATION
@@ -44,42 +72,42 @@
 \begin{minipage}[t]{0.45\textwidth} % 45% of the page width for name
 
 	\vspace{-\baselineskip} % Required for vertically aligning minipages
-%% SPECIAL EDITION for a certain Spanish Company, That REQUIRES a profile photo, despite other countries It's forbidden... And All my one-page content optimization It goes to trash... Thanks...
-\ExplSyntaxOn
+	%% SPECIAL EDITION for a certain Spanish Company, That REQUIRES a profile photo, despite other countries It's forbidden... And All my one-page content optimization It goes to trash... Thanks...
+	\ExplSyntaxOn
 
-\str_case_e:nnF~{\photo}
-{
+	\str_case_e:nnF~{\photo}
+	{
 	{true}{
-			  \includegraphics[width=0.4\linewidth]{profile.png}
+			\includegraphics[width=0.4\linewidth]{profile.png}
 		}
-}
-{}%
+	}
+	{}%
 
-\ExplSyntaxOff
+	\ExplSyntaxOff
 
 
 
 	% If your name is very short, use just one of the lines below
 	% If your name is very long, reduce the font size or make the minipage wider and reduce the others proportionately
 	\colorbox{black}{{\huge\textcolor{white}{\textbf{\MakeUppercase{Gabriel}}}}} % First name
-	
+
 	\colorbox{black}{{\huge\textcolor{white}{\textbf{\MakeUppercase{Bustillo del Cuvillo}}}}} % Last name
-	
+
 	\vspace{6pt}
-	
+
 	{\huge \GetTitleLocalized{\langsa}{\jobtype}} % Career or current job title
 \end{minipage}
 \begin{minipage}[t]{0.233\textwidth} % 27.5% of the page width for the first row of icons
 	\vspace{-\baselineskip} % Required for vertically aligning minipages
-	
+
 	% The first parameter is the FontAwesome icon name, the second is the box size and the third is the text
 	% Other icons can be found by referring to fontawesome.pdf (supplied with the template) and using the word after \fa in the command for the icon you want
 	\GetLocationLocalized{\langsa}
-	\textbf{E-Mail: }{\href{mailto:work@gabuscuv.dev}{\color{blue}\underline{work@gabuscuv.dev}}}\\	
+	\textbf{E-Mail: }{\href{mailto:work@gabuscuv.dev}{\color{blue}\underline{work@gabuscuv.dev}}}\\
 \end{minipage}
 \begin{minipage}[t]{0.30\textwidth} % 27.5% of the page width for the second row of icons
 	\vspace{-\baselineskip} % Required for vertically aligning minipages
-	
+
 	% The first parameter is the FontAwesome icon name, the second is the box size and the third is the text
 	% Other icons can be found by referring to fontawesome.pdf (supplied with the template) and using the word after \fa in the command for the icon you want
 	\textbf{Web: }{\href{https://gabuscuv.dev}{\color{blue}\underline{gabuscuv.dev}}}\\
@@ -100,29 +128,26 @@
 %	ADDITIONAL INFORMATION
 %----------------------------------------------------------------------------------------
 
+\ExplSyntaxOn
+
+\str_case_e:nnF~{\removeSideBars}
+{
+{true}{}
+}
+{
 \MainTechnologies{\langsa}{\jobtype}
 \hfill
 \ContributonsAndForks{\langsa}{\jobtype}
 \hfill
 \AdditionalInformation{\langsa}{\jobtype}
+}%
+\ExplSyntaxOff
 
 %----------------------------------------------------------------------------------------
 %	EXPERIENCE
 %----------------------------------------------------------------------------------------
-\ExplSyntaxOn
-
-\str_case_e:nnF~{\jobtype}
-{
-	{gamedev}{
-		\Projects{\langsa}{\jobtype}
-		\JobExperience{\langsa}{\jobtype}
-		}
-}{
-\JobExperience{\langsa}{\jobtype}	
+\JobExperience{\langsa}{\jobtype}
 \Projects{\langsa}{\jobtype}
-}%
-
-\ExplSyntaxOff
 
 %----------------------------------------------------------------------------------------
 %	EDUCATION
@@ -131,6 +156,7 @@
 \Education{\langsa}{\jobtype}
 
 \Courses{\langsa}{\jobtype}
+\Talks{\langsa}{\jobtype}
 
 %----------------------------------------------------------------------------------------
 

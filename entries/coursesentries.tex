@@ -2,39 +2,53 @@
 
 \newcommand\course_unitylearn[2]{
 \entry{
-					\str_case_e:nnF~{#1}
-					{
-						{en}{On-Going}
-						{es}{En~Proceso}
-					}{[null]}%
-					}{\href{\c__npkg_httpsprefix_tl learn.unity.com/u/5dcaa0efedbc2a002034f647}{\color{blue}\underline{Unity~-~Pathway:~Junior~Programmer}}}{Unity~Learn}{}
+\str_case_e:nnF~{#1}
+{
+{en}{On-Going}
+	{es}{En~Proceso}
+}{[null]}%
+}{\href{\c__npkg_httpsprefix_tl learn.unity.com/u/5dcaa0efedbc2a002034f647}{\color{blue}\underline{Unity~-~Pathway:~Junior~Programmer}}}{Unity~Learn}{}
 }
 
 \newcommand\course_unrealUdemy[2]{
-    \entry
-				{2019}
-				{\href{\c__npkg_httpsprefix_tl www.udemy.com/certificate/UC-OHE75YJE/}{\color{blue}\underline{Unreal~Engine~C++~Developer:~Learn~C++~and~Make~Video~Games}}}
-				{
-					\str_case_e:nnF~{#1}
-					{
-						{en}{~by~GameDev.tv~on~Udemy}
-						{es}{~por~GameDev.tv~en~Udemy}
-					}{[null]}%
-				}{}
+\entry
+{2019}
+{\href{\c__npkg_httpsprefix_tl www.udemy.com/certificate/UC-OHE75YJE/}{\color{blue}\underline{Unreal~Engine~C++~Developer:~Learn~C++~and~Make~Video~Games}}}
+{
+\str_case_e:nnF~{#1}
+{
+{en}{~by~GameDev.tv~on~Udemy}
+	{es}{~por~GameDev.tv~en~Udemy}
+}{[null]}%
+}{}
 }
 
 \newcommand\course_ccnaTwo[2]{
-    \entry
-        {2013}
-        {\href{\c__npkg_httpsprefix_tl gabuscuv.dev/img/certificates/CCNA2.jpg}{\color{blue}\underline{CCNA~Discovery~2~:~Working~at~a~Small-to-Medium~Business~or~ISP~}}}
-        {Cisco}{}
+	\entry
+	{2013}
+	{\href{\c__npkg_httpsprefix_tl gabuscuv.dev/img/certificates/CCNA2.jpg}{\color{blue}\underline{CCNA~Discovery~2~:~Working~at~a~Small-to-Medium~Business~or~ISP~}}}
+	{Cisco}{}
 }
 
 \newcommand\course_photoshopcsThree[2]{
-    \entry
-		{2013}
-		{\href{\c__npkg_httpsprefix_tl gabuscuv.dev/img/certificates/Photoshop.jpg}{\color{blue}\underline{Adobe~Photoshop~CS3}}}
-		{Grupo~System}{}
+	\entry
+	{2013}
+	{\href{\c__npkg_httpsprefix_tl gabuscuv.dev/img/certificates/Photoshop.jpg}{\color{blue}\underline{Adobe~Photoshop~CS3}}}
+	{Grupo~System}{}
+}
+
+\newcommand\talks_MotionCapture[2]{
+	\entry
+	{2023}
+	{Domestic~Motion~Capture}
+	{Cadiz~GameDev}{}
+}
+
+\newcommand\talks_AudioDesign[2]{
+	\entry
+	{2025}
+	{\href{\c__npkg_httpsprefix_tl github.com/gabuscuv/Presentations/blob/main/Audio-ES.md}{\color{blue}\underline{Dynamic~Audio~Design~through~Audio~Frameworks}}}
+	{Cadiz~GameDev}{}
 }
 
 \ExplSyntaxOff

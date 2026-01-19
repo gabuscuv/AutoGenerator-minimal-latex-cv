@@ -14,7 +14,12 @@
         inherit (pkgs.texlive)
           scheme-small
           moresize
+          latexmk
           latex-uni8
+          latexindent
+          datetime2
+          datetime2-english
+          datetime2-spanish
           collection-fontsrecommended
           collection-latexrecommended
           ;

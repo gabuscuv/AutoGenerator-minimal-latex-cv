@@ -1,252 +1,297 @@
 \ExplSyntaxOn
 
 \newcommand\WorkExperience_ghenova[2]{
-	\entry
-		{2025~-~\OnGoingLocalized{#1} \\\footnotesize{0.67~\GetYearsLocalized{#1}}}
-		{
-		
-		\str_case_e:nnF~{#1}
-		{
-			{en}{C++~Software~Developer~(Infrastructure-Software)}
-			{es}{Desarrollador~Software~C++~(Infrastructura-Software)}
-		}
-		{[null]}%
-			
-		}
-		{\href{\c__npkg_httpsprefix_tl digital.ghenova.com/}{\color{blue}\underline{Ghenova~Digital}},~San~Fernando,~Spain~-~Hybrid}
-		{
-		\str_case_e:nnF~{#1}
-		{
-			{en}{Defence~Project~for~Navantia~(F110~Series~and~related)}
-			{es}{Proyecto~de~defensa~para~Navantia~(serie~F110~y~relacionados)}
-		}{[null]}%
-		\\
-		\str_case_e:nnF~{#2}
-		{
-			{gamedev}{}
-		}{
-			\str_case_e:nnF~{#1}{
-				{en}{
-					-~Development~of~a~critical~system~for~monitoring,~displaying,~and~recording~video~streams~from~multiple~simultaneous~video~sources.\\
-					-~Development~of~a~terminal~control~and~authorization~system.
-				}
-				{es}{
-					-~Desarrollo~en~el~sistema~crítico~de~monitoreo,~visualización~y~grabación~de~flujo~de~video~múltiple~fuentes~de~video~simultáneos.\\
-					-~Desarrollo~en~el~sistema~de~control~de~terminales.
-				}
-			}{[null]}%
-		}%
-		\\
-		\texttt{Red~Hat~EL}\slashsep\texttt{C\++11}\slashsep\texttt{QT}\slashsep\texttt{GLibc}\slashsep\texttt{GObject}\slashsep\texttt{Gstreamer}\slashsep\texttt{ffmpeg}
+\entry
+{\DTMdisplaydate{2025}{02}{25}{-1}\\\OnGoingLocalized{#1} \\\footnotesize{0.67~\GetYearsLocalized{#1}}}
+{
+
+\str_case_e:nnF~{#1}
+{
+{en}{C++~Software~Developer~(Infrastructure-Software)}
+	{es}{Desarrollador~Software~C++~(Infrastructura-Software)}
+}
+{[null]}%
+
+}
+{\href{\c__npkg_httpsprefix_tl digital.ghenova.com/}{\color{blue}\underline{Ghenova~Digital}},~San~Fernando,~Spain~-~Hybrid}
+{
+\str_case_e:nnF~{#1}
+{
+{en}{Defence~Project~for~Navantia~(F110~Series~and~related)}
+	{es}{Proyecto~de~defensa~para~Navantia~(serie~F110~y~relacionados)}
+}{[null]}%
+
+\str_case_e:nnF~{#2}
+{
+}{
+\\
+\str_case_e:nnF~{#1}{
+{en}{
+		-~Development~of~real-time~visualization~and~monitoring~systems~for~naval~defense~projects.\\
+		-~Work~on~multi-source~video~pipelines~and~system-level~performance.\\
+		-~Work~on~Control~Terminal~Maganement~and~terminals~itself.\\
+		-~C++~development~on~Linux~(Qt,~GStreamer,~FFmpeg).
 	}
+	{es}{
+		-~Desarrollo~en~el~sistema~crítico~de~monitoreo,~visualización~y~grabación~de~flujo~de~video~múltiple~fuentes~de~video~simultáneos.\\
+		-~Development in a video stream redundancy system\\
+		-~Desarrollo~en~el~sistema~de~monitorizacion~y~mantenimiento.\\
+		-~Desarrollo~en~el~sistema~de~control~de~terminales.
+	}
+}{[null]}%
+}%
+\\
+\texttt{Red~Hat~EL}\slashsep\texttt{C++11}\slashsep\texttt{QT}\slashsep\texttt{GLibc}\slashsep\texttt{GObject}\slashsep\texttt{Gstreamer}\slashsep\texttt{ffmpeg}
+}
+}
+
+\newcommand\WorkExperience_abance_vraba_full[2]{
+\str_case_e:nnF~{#1}
+{
+{es}
+	{
+		\textbf{Visualizador~VR~de~Buques~(2023--2024)}:\\
+		-~Desarrollo~y~optimización~de~un~visualizador~3D~en~realidad~virtual~con~Unreal~Engine~5.1~y~actualización~a~5.3.\\
+		-~Implementación~de~soporte~multiusuario~y~multijugador~(replicación).\\
+		-~Optimización~del~proceso~de~importación~de~assets,~reduciendo~el~tiempo~de~40~minutos~a~10~minutos.\\
+		-~Optimización~de~E/S,~reduciendo~tiempos~de~carga~de~10--15~minutos~a~unos~pocos~segundos.\\
+		-~Creación~de~herramientas~automatizadas~para~procesamiento~de~contenido~con~Qt.\\
+		-~Automatización~mediante~Python~(commandlets~y~herramientas~en~editor).\\
+		-~Desarrollo~de~herramientas~personalizadas~y~opciones~de~accesibilidad~con~soporte~multiusuario.
+	}
+	{en}
+	{
+		\textbf{Internal~VR~Tool~(2023--2024)}:\\
+		-~Lead~developer~on~a~real-time~3D~ship~visualization~and~training~tool~using~Unreal~Engine~5.\\
+		-~Implemented~multi-user~networking,~simulation~features~and~VR~support.\\
+		-~Optimized~asset~import~and~IO~pipelines~(loading~times~reduced~from~minutes~to~seconds).\\
+		-~Built~custom~editor~and~runtime~tools~for~content~processing~and~automation.
+	}
+}{[null]}
+}
+
+\newcommand\WorkExperience_abance_usv_full[2]{
+\str_case_e:nnF~{#1}
+{
+{es}
+	{
+		\textbf{C++~Backend~Developer~(2024)}~Desarrollo~en~Comunicaciones~y~despliegue~de~Vehiculos~no~tripulados~(USV-ePark)~asi~como~apoyo~a~compañeros\\
+		-~Uno~de~los~3~desarrolladores~del~final~de~Abance~(donde~antes~solo~había~uno)~a~dos~meses~de~finalizacion\\
+		-~Desarrollador~de~dos~simuladores~(GPS,~WaterSpeed)~via~NMEA,~DIS~\&~a~protocolo~privado.\\
+		-~Desarrollador~pasarela~de~los~sonars~mediante~ZeroMQ-DDS.~(with~Request-Reply~Paradigm)\\
+	}
+	{en}
+	{
+		\textbf{C++~Backend~Developer~(2024)}:\\
+		-~Developed~communication~systems~for~Unmanned~Surface~Vehicles~(USV).\\
+		-~Implemented~simulation~tools~(GPS,~water~speed)~using~NMEA,~DIS,~and~proprietary~protocols.\\
+		-~Designed~and~maintained~inter-process~communication~using~ZeroMQ~and~DDS~(request--reply~pattern).\\
+		-~Improved~build,~deployment,~and~pre-production~pipelines.
+	}
+}{[null]}
 }
 
 \newcommand\WorkExperience_abance[2]{
-	\entry
-		{2023~-~2025\\\footnotesize{1.37~\GetYearsLocalized{#1}}}
-		{
-		\str_case_e:nnF~{#1}
-		{
-			{en}{Main~VR~UE5,~C\#~Tools~\&~TS~Developer}
-			{es}{Desarrollador~principal}
-		}{[null]}%
-		}
-		
-		{\href{\c__npkg_httpsprefix_tl www.abance.es/en/}{\color{blue}\underline{Abance~-~Global~Engineering}},~Puerto~de~Santa~Maria,~Spain~-~Hybrid}
-		{
-		\str_case_e:nnF~{#1}
-		{
-			{en}{
-			\str_case_e:nnF~{#2}
-				{
-				{webdev}{
-					\textbf{Two~React/Next~JS/TypeScript~Projects}\\
-					-~Making~a~Landing~Page~for~Abance~Web~using~Next.JS~Typescript \\
-					-~Making~a~CRUD~\&~integration~with~the~next~mentioned~Parsing~Tools~(And~Other~Utilities)\\
-					\textbf{Wordpress~Maintenance~(2024)}\\
-					\textbf{C\#~Tools~(2024)}:~Development~of~Excel~Parsers~(OpenXML)~\&~Intercomunication~with~Next.JS 
-				}
-				{backend}{
-					\textbf{C++~Backend~Developer~(2024)}:~Development~of~Unmanned~Surface~Vehicle~Communications\\
-					\textbf{Main~React/Next~JS/TypeScript~Developer~(2024)}:~CRUD~Database~For~Integrated~Logistics~Support~(ILS)\\
-					\textbf{C\#~Tools~(2024)}:~Documentation/Filtering~Tools~for~Integrated~Logistics~Support~Engineering.\\
-					\textbf{Internal~VR~Tool~(2023-2024)}:~Development~of~a~VR~3D~Model~Viewer~made~with~Unreal~Engine~5.3.
-					}
-				{gamedev}{
-					\textbf{Internal~VR~Tool~(2023-2024)}:Development,~Optimizations~of~a~VR~3D~Model~Viewer~made~with~Unreal~Engine~5.1~and~upgrading~to~5.3.\\
-					-~Multi-User/Multiplayer/Networking~(replication) \\
-					-~Import~Asset~Optimizations~(from~40~minutes~to~10~minutes)\\
-					-~I/O~Optimization~(reduction~of~10-15~Min~to~a~few~seconds) \\
-					-~Automatized~Content~Build~Pipeline~with~QT~tools \\
-					-~Python~Automatization~(Commandlet~and~In-Editor)\\
-					-~In-Game~Custom~Tools~(Multi-User~Supported)~\&~Accessibility~Options \\
-					\textbf{C++~Backend~Developer~(2024)}:~Development~of~Unmanned~Surface~Vehicle~Communications\\
-					\textbf{C\#~Tools~(2024)}:~Documentation/Filtering~Tools~for~Integrated~Logistics~Support~Engineering.
-				}
-			}{
-				\textbf{C++~Backend~Developer~(2024)}:~Development~of~Unmanned~Surface~Vehicle~Communications\\
-				\textbf{Two~React/Next~JS/TypeScript~Projects~(2024)}\\
-				-~Making~a~Landing~Page~for~Abance~Web~using~Next.JS~Typescript \\
-				-~Making~a~CRUD~\&~integration~with~the~next~mentioned~Parsing~Tools~(And~Other~Utilities)\\
-				\textbf{Wordpress~Maintenance~(2024)}\\
-				\textbf{C\#~Tools~(2024)}:~Documentation/Filtering~Tools~for~Integrated~Logistics~Support~Engineering.\\
-				\textbf{VR~3D~Model~Viewer~(2023-2024)}:~Development~\&~Optimizations~made~with~Unreal~Engine~5.3.
-			}%
-			}
-			{es}{
-				\str_case_e:nnF~{#2}
-				{
-				{gamedev}{
-				\textbf{VR~Visualizador~Buques~(2023-2024)}:Desarrollo,~Optimizaciones~hecho~con~Unreal~Engine~5.1~y~actualización~a~5.3.\\
-				-~Multiusuario/Multijugador/Redes~(replicación) \\
-				-~Optimization~de~importaje~de~Assets~(de~40~minutos~a~10~minutos)\\
-				-~Optimización~de~E/S~(reducción~de~10-15~minutos~a~unos~pocos~segundos~en~carga)~\\
-				-~Creacion~de~herramientas~de~automatizacion~de~procesamiento~de~contenido~en~QT)~\\
-				-~Automatización~en~Python~(Commandlet~and~In-Editor)\\
-				-~Opciones~de~Accesiblidad~\&~Herramientas~Personalizadas~en~la~aplicación~(Multi~Usuario~Soportado).\\
-				\textbf{C++~Backend~Developer~(2024)}:~Desarrollo~en~Comunicaciones~de~Vehiculos~no~tripulados.~(USV-ePark)~\\
-				\textbf{C\#~Tools~Developer~(2024)}:~Desarrollo~de~Herramientas~de~filtraje/documentación.
-				}
-				
-				}{
-				\textbf{C++~Backend~Developer~(2024)}~Desarrollo~en~Comunicaciones~y~despliegue~de~Vehiculos~no~tripulados~(USV-ePark)~asi~como~apoyo~a~compañeros\\
-				\textbf{Principal~ReactJS/Next~JS/TypeScript~Developer~(2024-2025)}:~CRUD~para~Integrated~Logistics~Support~(ILS)~y~una~Landing~Page~\\
-				\textbf{Herramienta~de~filtraje/documentación~(2024)}:Desarrollo~de~Excel~Parsers~(OpenXML)~\&~HTML~Scrapper/Converter~a~formato~S1000D,~Consultor~de~ecosistema~.NET~(arquitectura~migración),~Convertidor~Automatizado~Multimedia~Multiproceso.\\
-				\textbf{Visor~de~Buques~VR~(2023-2024)}:~Desarrollo~y~optimizacion~hecho~con~Unreal~Engine~5.3.
-				}%
-			}
-		}{		\textbf{Herramienta~de~filtraje/documentación~(2024)}:Desarrollo~de~Excel~Parsers~(OpenXML)~\&~HTML~Scrapper/Converter~a~formato~S1000D,~Consultor~de~ecosistema~.NET~(arquitectura~migración),~Convertidor~Automatizado~Multimedia~Multiproceso. \\
-		}%
-		\\
-		\str_case_e:nnF~{#2}{
-		{gamedev}{\texttt{Unreal~Engine~5}\slashsep\texttt{C++17~\&~Blueprints}\slashsep\texttt{C\#~\&~.NET}\slashsep\texttt{QT}\slashsep\texttt{MySQL}\slashsep\texttt{GRPC}}
-		{webdev}{\texttt{TypeScript}\slashsep\texttt{ReactJS}\slashsep\texttt{Next.JS}\slashsep\texttt{PHP}\slashsep\texttt{Wordpress}\slashsep\texttt{C\#/.NET}\slashsep\texttt{C++ 11\&17}}
-		}{\texttt{C++ 11\&17}\slashsep\texttt{C\#/.NET}\slashsep\texttt{TypeScript}\slashsep\texttt{QT}\slashsep\texttt{Unreal~Engine~5}\slashsep\texttt{MySQL}\slashsep\texttt{GRPC}}%
-		}{}%
-		
+\entry
+{\DTMdisplaydate{2023}{09}{25}{-1}\\\DTMdisplaydate{2025}{02}{25}{-1}\\\footnotesize{1.37~\GetYearsLocalized{#1}}}
+{
+\str_case_e:nnF~{#1}
+{
+{en}{Main~VR~UE5,~C\#~Tools~\&~TS~Developer}
+	{es}{Desarrollador~principal}
+}{[null]}%
+}
+
+{\href{\c__npkg_httpsprefix_tl www.abance.es/en/}{\color{blue}\underline{Abance~-~Global~Engineering}},~Puerto~de~Santa~Maria,~Spain~-~Hybrid}
+{
+\str_case_e:nnF~{#1}
+{
+{en}{
+\str_case_e:nnF~{#2}
+{
+{webdev}{
+		\textbf{Two~React/Next~JS/TypeScript~Projects}\\
+		-~Making~a~Landing~Page~for~Abance~Web~using~Next.JS~Typescript \\
+		-~Making~a~CRUD~\&~integration~with~the~next~mentioned~Parsing~Tools~(And~Other~Utilities)\\
+		\textbf{Wordpress~Maintenance~(2024)}\\
+		\textbf{C\#~Tools~(2024)}:~Development~of~Excel~Parsers~(OpenXML)~\&~Intercomunication~with~Next.JS
+	}
+	{backend}{
+		\WorkExperience_abance_usv_full{#1}{#2} \\
+		\textbf{Main~React/Next~JS/TypeScript~Developer~(2024)}:~CRUD~Database~For~Integrated~Logistics~Support~(ILS)\\
+		\textbf{C\#~Tools~(2024)}:~Documentation/Filtering~Tools~for~Integrated~Logistics~Support~Engineering.\\
+		\textbf{Internal~VR~Tool~(2023-2024)}:~Development~of~a~VR~3D~Model~Viewer~made~with~Unreal~Engine~5.3.
+	}
+	{gamedev}{
+		\WorkExperience_abance_vraba_full{#1}{#2} \\
+		\textbf{C++~Backend~Developer~(2024)}:~Development~of~Unmanned~Surface~Vehicle~Communications\\
+		\textbf{C\#~Tools~(2024)}:~Documentation/Filtering~Tools~for~Integrated~Logistics~Support~Engineering.
+	}
+	{full}{
+		\textbf{Main~React/Next~JS/TypeScript~Developer~(2024)}:~CRUD~Database~For~Integrated~Logistics~Support~(ILS)\\
+		\textbf{Wordpress~Maintenance~(2024)}\\
+		\WorkExperience_abance_vraba_full{#1}{#2} \\
+		\WorkExperience_abance_usv_full{#1}{#2} \\
+		\textbf{C\#~Tools~(2024)}:~Documentation/Filtering~Tools~for~Integrated~Logistics~Support~Engineering.
+	}
+}{
+\textbf{C++~Backend~Developer~(2024)}:~Development~of~Unmanned~Surface~Vehicle~Communications\\
+\textbf{Two~React/Next~JS/TypeScript~Projects~(2024)}\\
+-~Making~a~Landing~Page~for~Abance~Web~using~Next.JS~Typescript \\
+-~Making~a~CRUD~\&~integration\\
+\textbf{Wordpress~Maintenance~(2024)}\\
+\textbf{C\#~Tools~(2024)}:~Documentation/Filtering~Tools~for~Integrated~Logistics~Support~Engineering.\\
+\textbf{VR~3D~Model~Viewer~(2023-2024)}:~Development~\&~Optimizations~made~with~Unreal~Engine~5.3.
+}%
+}
+{es}{
+\str_case_e:nnF~{#2}
+{
+{gamedev}{
+		\WorkExperience_abance_vraba_full{#1}{#2}\\
+		\WorkExperience_abance_usv_full{#1}{#2}\\
+		\textbf{C\#~Tools~Developer~(2024)}:~Desarrollo~de~Herramientas~de~filtraje/documentación.
+	}
+	{full}{
+		\WorkExperience_abance_usv_full{#1}{#2}\\
+		\textbf{Principal~ReactJS/Next~JS/TypeScript~Developer~(2024-2025)}:~CRUD~para~Integrated~Logistics~Support~(ILS)~y~una~Landing~Page~\\
+		\textbf{Desarrollador~de~Herramienta~de~filtraje/documentación~(2024)~(C\#)~}:Desarrollo~de~Excel~Parsers~(OpenXML)~\&~HTML~Scrapper/Converter~a~formato~S1000D,~Consultor~de~ecosistema~.NET~(arquitectura~migración),~Convertidor~Automatizado~Multimedia~Multiproceso.\\
+		\WorkExperience_abance_vraba_full{#1}{#2}
+
+	}
+
+}{
+\textbf{C++~Backend~Developer~(2024)}~Desarrollo~en~Comunicaciones~y~despliegue~de~Vehiculos~no~tripulados~(USV-ePark)~asi~como~apoyo~a~compañeros\\
+\textbf{Principal~ReactJS/Next~JS/TypeScript~Developer~(2024-2025)}:~CRUD~para~Integrated~Logistics~Support~(ILS)~y~una~Landing~Page~\\
+\textbf{Herramienta~de~filtraje/documentación~(2024)}:Desarrollo~de~Excel~Parsers~(OpenXML)~\&~HTML~Scrapper/Converter~a~formato~S1000D,~Consultor~de~ecosistema~.NET~(arquitectura~migración),~Convertidor~Automatizado~Multimedia~Multiproceso.\\
+\textbf{Visor~de~Buques~VR~(2023-2024)}:~Desarrollo~y~optimizacion~hecho~con~Unreal~Engine~5.3.
+}%
+}
+}{		\textbf{Herramienta~de~filtraje/documentación~(2024)}:Desarrollo~de~Excel~Parsers~(OpenXML)~\&~HTML~Scrapper/Converter~a~formato~S1000D,~Consultor~de~ecosistema~.NET~(arquitectura~migración),~Convertidor~Automatizado~Multimedia~Multiproceso. \\
+}%
+\\
+\str_case_e:nnF~{#2}{
+{gamedev}{\texttt{Unreal~Engine~5}\slashsep\texttt{C++17~\&~Blueprints}\slashsep\texttt{C\#~\&~.NET}\slashsep\texttt{QT}\slashsep\texttt{MySQL}\slashsep\texttt{GRPC}}
+	{webdev}{\texttt{TypeScript}\slashsep\texttt{ReactJS}\slashsep\texttt{Next.JS}\slashsep\texttt{PHP}\slashsep\texttt{Wordpress}\slashsep\texttt{C\#/.NET}\slashsep\texttt{C++ 11\&17}}
+}{\texttt{C++ 11\&17}\slashsep\texttt{C\#/.NET}\slashsep\texttt{TypeScript}\slashsep\texttt{QT}\slashsep\texttt{Unreal~Engine~5}\slashsep\texttt{MySQL}\slashsep\texttt{GRPC}}%
+}{}%
+
 }
 
 
 \newcommand\WorkExperience_itixo[2]{
-	\entry
-		{2018~--~2020\\\footnotesize{2.30~\GetYearsLocalized{#1}}}
-		{
-		
-		\str_case_e:nnF~{#1}
-		{
-			{en}{Mainly~Backend~Developer}
-			{es}{Principalmente~Desarrollador~Backend}
-		}
-		{[null]}%
-			
-		}
-		{\href{\c__npkg_httpsprefix_tl www.itixo.com/}{\color{blue}\underline{Itixo~s.r.o/ICT~Capital~s.r.o}},~Prague,~Czechia~-~Remote}
-		{
-		\str_case_e:nnF~{#1}
-		{
-			{en}{Creation,~design,~refactoring~and~maintenance~of~Software~and~unit~tests~in~.NET~Framework,~Refactoring~and~migration~tasks~to~.NET~Standard/Core~for~old~and~new~projects~}
-			{es}{Creación,~diseño,~refactorización~y~mantenimiento~de~software~y~pruebas~unitarias~en~.NET~Framework~para~proyectos~antiguos~y~nuevos~además~de~tareas~de~migración~a~.NET~Standard/Core}
-		}{[null]}%
-		\str_case_e:nnF~{#2}
-		{
-			{gamedev}{}
-			{backend}
-			{
-				\str_case_e:nnF~{#1}{
-			{en}{\\Detailed~Achievements:\\
-			~-~Development~of~modular~monitoring~and~alarm~services/daemons~.
-				}
-			{es}{
-				\\Logros~Detallados:\\
-				~-~Desarrollo~de~servicios/daemon~de~monitorización~y~alarma~modular.
-				}
-		}{[null]}%
-			}
-			{webdev}
-			{
-				\str_case_e:nnF~{#1}{
-			{en}{\\Detailed~Achievements:\\
-				~-~Development~of~tools~for~displaying~sales~graphics~in~the~web~administration~part.}
-			{es}{
-				\\Logros~Detallados:\\
-				~-~Desarrollo~de~herramientas~de~visualizacion~de~graficos~de~ventas~en~la~parte~de~administracion~web.
-				}
-		}{[null]}%
-			}
-		}{
-			\str_case_e:nnF~{#1}{
-			{en}{\\Detailed~Achievements:\\
-				~-~Development~of~modular~monitoring~and~alarm~services/daemons~.~\\
-				~-~Development~of~tools~for~displaying~sales~graphics~in~the~web~administration~part.}
-			{es}{
-				\\Logros~Detallados:\\
-				~-~Desarrollo~de~servicios/daemon~de~monitorización~y~alarma~modular.~\\
-				~-~Desarrollo~de~herramientas~de~visualizacion~de~graficos~de~ventas~en~la~parte~de~administracion~web.
-				}
-		}{[null]}%
-		}%
-		\\
-		\texttt{C\#~\&~.Net~Framework}\slashsep\texttt{Microsoft~SQL~Server}\slashsep\texttt{Microsoft~Azure}\slashsep\texttt{JavaScript}
+\entry
+{\DTMdisplaydate{2018}{02}{25}{-1}\\\DTMdisplaydate{2018}{06}{25}{-1}\\\footnotesize{2.30~\GetYearsLocalized{#1}}}
+{
+\str_case_e:nnF~{#1}
+{
+{en}{Mainly~Backend~Developer}
+	{es}{Principalmente~Desarrollador~Backend}
+}{[null]}%
+}
+{\href{\c__npkg_httpsprefix_tl www.itixo.com/}{\color{blue}\underline{Itixo~s.r.o/ICT~Capital~s.r.o}},~Prague,~Czechia~-~Remote}
+{
+\str_case_e:nnF~{#1}
+{
+{en}{
+		Creation,~design,~refactoring~and~maintenance~of~Software~and~unit~tests~in~.NET~Framework,~Refactoring
+		and~migration~tasks~to~.NET~Standard/Core~for~old~and~new~projects\
 	}
+	{es}{Rediseño~completo~de~una~aplicación~web~legada~desarrollada~en~Microsoft~Silverlight,~migrándola~a~Node.js~mediante~ingeniería~inversa~de~una~API~REST~por~falta~de~documentación.~Integración~con~RPM~e~init.d~en~sistemas~CentOS/Red~Hat.
+	}
+}{[null]}%
+\str_case_e:nnF~{#2}
+{
+{backend}
+{
+\str_case_e:nnF~{#1}{
+{en}{
+		\
+		-~Built~monitoring~services~(With~E-Mail~Support),~dashboards~and~backend~systems.\\
+		-~Developed~internal~tools~and~automation~pipelines.\\
+	}
+	{es}{
+		\\Logros~Detallados:\\
+		~-~Desarrollo~de~servicios/daemon~de~monitorización~y~alarma~modular.
+	}
+}{[null]}%
+}
+}{
+\str_case_e:nnF~{#1}{
+{en}{
+		Creation,~design,~refactoring~and~maintenance~of~Software~and~unit~tests~in~.NET~Framework,~Refactoring
+		and~migration~tasks~to~.NET~Standard/Core~for~old~and~new~projects\\
+		-~Built~monitoring~services,~dashboards~and~backend~systems.\\
+		-~Developed~internal~tools~and~automation~pipelines.\\
+	}
+	{es}{
+	}
+}{[null]}%
+
+
+}
+\texttt{C\#~\&~.Net~Framework}\slashsep\texttt{Microsoft~SQL~Server}\slashsep\texttt{Microsoft~Azure}\slashsep\texttt{JavaScript}
+}
+
 }
 
 \newcommand\WorkExperience_knowledgemill[2]{
-	\entry
-		{2017\\\footnotesize{0.3~\GetYearsLocalized{#1}}}
-		{
-		\str_case_e:nnF~{#1}
-		{
-			{en}{Full-Stack~Software~Developer}
-			{es}{Desarrollador~Full~stack}
-		}{[null]}%
-		}
-		
-		{\href{\c__npkg_httpsprefix_tl knowledgemill.com/}{\color{blue}\underline{KnowledgeMill~Limited}},~London,~England~-~\GetOnSiteLocalized{#1}}
-		{
-		\str_case_e:nnF~{#1}
-		{
-			{en}{
-			Remade~a~Web~Application~originally~made~with~Microsoft~Silverlight~to~Node.js~with~REST~API~reverse~engineering~(because~the~lack~of~documentation)~and~RPM~\&~init.d~Integration~(CentOS/Red~Hat)
-			}
-			{es}{Rehacer~una~Aplicación~Web~originalmente~hecha~con~Microsoft~Silverlight~a~Node.js~haciendo~ingeniería~inversa~por~falta~de~documentación~y~integracion~con~RPM~(CentOS/Red~Hat/Fedora)~y~init.d~	
-			}
-		}{[null]}%
-		\\
-		\str_case_e:nnF~{#1}
-		{
-			{en}{
-			\str_case_e:nnF~{#2}
-				{
-				{gamedev}{}
-			}{Detailed~achievements:~\\
-			-~Improving~WebApp~offering~Microsoft~Exchange~Service~Support~and~Integration~like~other~newer~Company’s~products.~\\
-			-~Redesign~Front~Page.}%
-			}
-			{es}{
-			\str_case_e:nnF~{#2}
-			{
-				{dev}{}
-				{gamedev}{}
-			}{Logros~detallados:~\\
-			-~Mejorar~la~aplicación~web~ofreciendo~soporte~e~integración~de~Microsoft~Exchange~como~otros~productos~más~nuevos~de~la~compañía.\\
-			-~Re-diseño~de~la~Web.}%
-			}
-		}{[null]}%
-		\\
-		~\texttt{Node.js}\slashsep\texttt{JS/ECMA6+}\slashsep\texttt{BootStrap}\slashsep\texttt{Microsoft~Exchange~Service}\slashsep\texttt{CentOS/RPM}}
+\entry
+{\DTMdisplaydate{2017}{08}{25}{-1}\\\DTMdisplaydate{2017}{12}{04}{-1}\\\footnotesize{0.3~\GetYearsLocalized{#1}}}
+{
+\str_case_e:nnF~{#1}
+{
+{en}{Full-Stack~Software~Developer}
+	{es}{Desarrollador~Full~stack}
+}{[null]}%
+}
+
+{\href{\c__npkg_httpsprefix_tl knowledgemill.com/}{\color{blue}\underline{KnowledgeMill~Limited}},~London,~England~-~\GetOnSiteLocalized{#1}}
+{
+\str_case_e:nnF~{#1}
+{
+{en}{
+		Redesigned~a~legacy~web~application~originally~built~with~Microsoft~Silverlight,~migrating~it~to~Node.js~by~reverse~engineering~a~REST~API~due~to~lack~of~documentation.~Integrated~the~solution~with~RPM~packaging~and~init.d~services~on~CentOS/Red~Hat~systems.
+	}
+	{es}{Rediseño~completo~de~una~aplicación~web~legada~desarrollada~en~Microsoft~Silverlight,~migrándola~a~Node.js~mediante~ingeniería~inversa~de~una~API~REST~por~falta~de~documentación.~Integración~con~RPM~e~init.d~en~sistemas~CentOS/Red~Hat.
+	}
+}{[null]}%
+\\
+\str_case_e:nnF~{#1}
+{
+{en}{
+\str_case_e:nnF~{#2}
+{
+{gamedev}{}
+}{Detailed~achievements:~\\
+-~Improving~WebApp~offering~Microsoft~Exchange~Service~Support~and~Integration~like~other~newer~Company’s~products.~\\
+-~Redesign~Front~Page.}%
+}
+{es}{
+\str_case_e:nnF~{#2}
+{
+{dev}{}
+	{gamedev}{}
+}{Logros~detallados:~\\
+-~Mejorar~la~aplicación~web~ofreciendo~soporte~e~integración~de~Microsoft~Exchange~como~otros~productos~más~nuevos~de~la~compañía.\\
+-~Re-diseño~de~la~Web.}%
+}
+}{[null]}%
+\\
+~\texttt{Node.js}\slashsep\texttt{JS/ECMA6+}\slashsep\texttt{BootStrap}\slashsep\texttt{Microsoft~Exchange~Service}\slashsep\texttt{CentOS/RPM}}
 }
 
 \newcommand\WorkExperience_viewnext[2]{
-		\entry
-		{2017\\\footnotesize{0.2~\GetYearsLocalized{#1}}}
-		{\str_case_e:nnF~{#1}
-		{
-			{en}{Trainee~Software~Developer}
-			{es}{Desarrollador~de~Software~en~Prácticas}
-		}{[null]}%
-		}
-		{\href{\c__npkg_httpsprefix_tl www.viewnext.com/}{Viewnext~(An~IBM~Subsidiary)},~Caceres,~Spain~-~\GetOnSiteLocalized{#1}}
-		{\texttt{IBM~Websphere}\slashsep\texttt{IBM~MQ~Manager}\slashsep\texttt{ESQL}}
+\entry
+{\DTMdisplaydate{2017}{03}{15}{-1}\\\DTMdisplaydate{2017}{06}{04}{-1}\\\footnotesize{1.37~\GetYearsLocalized{#1}}}
+{\str_case_e:nnF~{#1}
+{
+{en}{Trainee~Software~Developer}
+	{es}{Desarrollador~de~Software~en~Prácticas}
+}{[null]}%
+}
+{\href{\c__npkg_httpsprefix_tl www.viewnext.com/}{Viewnext~(An~IBM~Subsidiary)},~Caceres,~Spain~-~\GetOnSiteLocalized{#1}}
+{\texttt{IBM~Websphere}\slashsep\texttt{IBM~MQ~Manager}\slashsep\texttt{ESQL}\slashsep\texttt{Jazz}}
 }
 
 \ExplSyntaxOff

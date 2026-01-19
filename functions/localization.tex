@@ -1,111 +1,111 @@
 
 \ExplSyntaxOn
 
-\newcommand\GetTitleLocalized[2]{		
-		\str_case_e:nnF~{#2}
-		{
-			{gamedev}{
-				\str_case_e:nnF~{#1}
-				{
-					{en}{Game~Developer}
-					{es}{Game~Developer}
-				}
-				{[null]}%
-				}
-			{backend}
-			{
-				\str_case_e:nnF~{#1}
-				{
-					{en}{Backend~Developer}
-					{es}{Desarrollador~de~Backend}
-				}
-				{[null]}%
-			}
-			{webdev}
-			{
-				\str_case_e:nnF~{#1}
-				{
-					{en}{Full~Stack~Web~Developer}
-					{es}{Desarrollador~Web~Full~Stack}
-				}
-				{[null]}%
-			}
-		}
-		{\str_case_e:nnF~{#1}
-		{
-			{en}{Software~Developer}
-			{es}{Desarrollador~de~Software}
-		}
-		{[null]}%
-		}%
-	}
-
-\newcommand\OnGoingLocalized[1]{		
-		\str_case_e:nnF~{#1}
-		{
-			{en}{On-Going}
-			{es}{En~Curso}
-		}
-		{[null]}%
-	}
-
-	\newcommand\NexusLocalized[1]{		
-		\str_case_e:nnF~{#1}
-		{
-			{en}{of~}
-			{es}{de~}
-		}
-		{[null]}%
-	}
-
-\newcommand\GetLocationLocalized[1]{		
+\newcommand\GetTitleLocalized[2]{
+\str_case_e:nnF~{#2}
+{
+{gamedev}{
 \str_case_e:nnF~{#1}
-	{
-		{en}{\textbf{Location:~}{El~Puerto~de~Santa~Maria~(Cádiz),~Spain}\\}
-		{es}{\textbf{Lugar:~}{El~Puerto~de~Santa~Maria~(Cádiz),~España}\\}
-	}
-	{[null]}%
+{
+{en}{Game~Developer}
+	{es}{Game~Developer}
+}
+{[null]}%
+}
+{backend}
+{
+\str_case_e:nnF~{#1}
+{
+{en}{Backend~Developer}
+	{es}{Desarrollador~de~Backend}
+}
+{[null]}%
+}
+{webdev}
+{
+\str_case_e:nnF~{#1}
+{
+{en}{Full~Stack~Web~Developer}
+	{es}{Desarrollador~Web~Full~Stack}
+}
+{[null]}%
+}
+}
+{\str_case_e:nnF~{#1}
+{
+{en}{Software~Developer}
+	{es}{Desarrollador~de~Software}
+}
+{[null]}%
+}%
+}
+
+\newcommand\OnGoingLocalized[1]{
+\str_case_e:nnF~{#1}
+{
+{en}{On-Going}
+	{es}{En~Curso}
+}
+{[null]}%
+}
+
+\newcommand\NexusLocalized[1]{
+\str_case_e:nnF~{#1}
+{
+{en}{of~}
+	{es}{de~}
+}
+{[null]}%
+}
+
+\newcommand\GetLocationLocalized[1]{
+\str_case_e:nnF~{#1}
+{
+{en}{\textbf{Location:~}{El~Puerto~de~Santa~Maria~(Cádiz),~Spain}\\}
+	{es}{\textbf{Lugar:~}{El~Puerto~de~Santa~Maria~(Cádiz),~España}\\}
+}
+{[null]}%
 }
 
 \newcommand\MoreInfoLocalized[1]{
-	\color{blue}\underline{		
-		\str_case_e:nnF~{#1}
-		{
-			{en}{More~Information}
-			{es}{Más~Informacion}
-		}
-		{[null]}%
-	}
-	}
+\color{blue}\underline{
+\str_case_e:nnF~{#1}
+{
+{en}{More~Information}
+	{es}{Más~Informacion}
+}
+{[null]}%
+}
+}
 
-\newcommand\GetYearsLocalized[1]{		
-		\str_case_e:nnF~{#1}
-		{
-			{en}{years}
-			{es}{años}
-		}
-		{[null]}%
-	}
+\newcommand\GetYearsLocalized[1]{
+\str_case_e:nnF~{#1}
+{
+{en}{years}
+	{es}{años}
+}
+{[null]}%
+}
 
 \newcommand\GetContributionLocalized[1]{
-	{
-	\str_case_e:nnF~{#1}
-	{
-		{en}{Contribution}
-		{es}{Contribución}
-	}
-	{[null]}%
-	}
+{
+\str_case_e:nnF~{#1}
+{
+{en}{Contribution}
+	{es}{Contribución}
+}
+{[null]}%
+}
 }
 
 \newcommand\GetOnSiteLocalized[1]{
-		\str_case_e:nnF~{#1}
-		{
-			{en}{On-Site}
-			{es}{Presencial}
-		}
-		{[null]}%
-	}
+\str_case_e:nnF~{#1}
+{
+{en}{On-Site}
+	{es}{Presencial}
+}
+{[null]}%
+}
 
 
 \ExplSyntaxOff

@@ -10,136 +10,148 @@
 
 \newcommand\Projects[2]{
 \cvsect{\str_case_e:nnF~{#1}
-	{
-		{en}{Projects}
-		{es}{Proyectos}
-	}{[null]}%
-	}{
-		~\str_case_e:nnF~{#2}
-	{
-		{gamedev}{(6~\str_case_e:nnF~{#1}{{en}{of} {es}{de}}{[null]}~16~\str_case_e:nnF~{#1}{{en}{projects} {es}{proyectos}}{[null]})~}
-		{dev}{(4~\str_case_e:nnF~{#1}{{en}{of} {es}{de}}{[null]}~16~\str_case_e:nnF~{#1}{{en}{projects} {es}{proyectos}}{[null]})~}
-	}{(4~\str_case_e:nnF~{#1}{{en}{of} {es}{de}}{[null]}~16~\str_case_e:nnF~{#1}{{en}{projects} {es}{proyectos}}{[null]})~}%
-		~-~8~\GetYearsLocalized{#1}~-~\href{\c__npkg_httpsprefix_tl gabuscuv.dev/en/Projects}{~\textit{\MoreInfoLocalized{#1}}}
-		}
+{
+{en}{Projects}
+	{es}{Proyectos}
+}{[null]}%
+}{
+~\str_case_e:nnF~{#2}
+{
+{gamedev}{(6~\str_case_e:nnF~{#1}{{en}{of} {es}{de}}{[null]}~16~\str_case_e:nnF~{#1}{{en}{projects} {es}{proyectos}}{[null]})~}
+{dev}{(4~\str_case_e:nnF~{#1}{{en}{of} {es}{de}}{[null]}~16~\str_case_e:nnF~{#1}{{en}{projects} {es}{proyectos}}{[null]})~}
+}{(4~\str_case_e:nnF~{#1}{{en}{of} {es}{de}}{[null]}~16~\str_case_e:nnF~{#1}{{en}{projects} {es}{proyectos}}{[null]})~}%
+~-~8~\GetYearsLocalized{#1}~-~\href{\c__npkg_httpsprefix_tl gabuscuv.dev/en/Projects}{~\textit{\MoreInfoLocalized{#1}}}
+}
 
 \begin{entrylist}
-% Post-VRProject
-\str_case_e:nnF~{#2}
-    {
-        {dev}{
+	% Post-VRProject
+	\str_case_e:nnF~{#2}
+	{
+	{dev}{
 			\project_webscrapper{#1}{#2}
 			%\project_Backlog{#1}{#2}
-			}
-        {gamedev}{\project_Gamejams{#1}{#2}
-		%\project_webscrapper{#1}{#2}
 		}
-    }{
-		\project_webscrapper{#1}{#2}
-		%\project_Backlog{#1}{#2}
-		}%
-% End of Post-VRProject
+		{gamedev}{\project_Gamejams{#1}{#2}
+			%\project_webscrapper{#1}{#2}
+		}
+	}{
+	\project_webscrapper{#1}{#2}
+	%\project_Backlog{#1}{#2}
+	}%
+	% End of Post-VRProject
 
-\project_vrprojectandunrealrelated{#1}{#2}
+	\project_vrprojectandunrealrelated{#1}{#2}
 
-% Pre-VRProject
-\str_case_e:nnF~{#2}
-    {
-        {dev}{}
-        {gamedev}{
+	% Pre-VRProject
+	\str_case_e:nnF~{#2}
+	{
+	{dev}{}
+		{gamedev}{
 			%\project_gamedevmisc{#1}{#2}
-			}
-    }{}%
+		}
+	}{}%
 
 \end{entrylist}
 }
 
 \newcommand\Courses[2]{
-	\cvsect{
-	\str_case_e:nnF~{#1}
+\cvsect{
+\str_case_e:nnF~{#1}
+{
+{en}{Courses}
+	{es}{Cursos}
+}{[null]}%
+}{}
+\begin{entrylist}
+	\str_case_e:nnF~{#2}
 	{
-		{en}{Courses}
-		{es}{Cursos}
-	}{[null]}%
-		}{}
-	\begin{entrylist}
-		\str_case_e:nnF~{#2}
+	{gamedev}
 		{
-			{gamedev}
-			{
-				\course_unrealUdemy{#1}{#2}
-				%\course_unitylearn{#1}{#2}
-			}
-			{dev}
-			{
-				%\course_ccnaTwo{#1}{#2}
-			}
-		}{}%
-		\course_ccnaTwo{#1}{#2}
-		\course_photoshopcsThree{#1}{#2}
-	\end{entrylist}
+			\course_unrealUdemy{#1}{#2}
+			%\course_unitylearn{#1}{#2}
+		}
+		{dev}
+		{
+			%\course_ccnaTwo{#1}{#2}
+		}
+	}{}%
+	\course_ccnaTwo{#1}{#2}
+	\course_photoshopcsThree{#1}{#2}
+\end{entrylist}
 }
-
 \newcommand\JobExperience[2]{
 \cvsect{\str_case_e:nnF~{#1}
 {
-	{en}{Work~Experience}
+{en}{Work~Experience}
 	{es}{Experiencia~Laboral}
 }{[null]}%
-}{(
-		\str_case_e:nnF~{#2}{
-			{gamedev}{2~}
-			}{4~}
-		\NexusLocalized{#1}
-		~5~
-		\str_case_e:nnF~{#1}{
-			{en}{Companies~} 
-			{es}{Compañias~}
-			}{[null]}		
-		~-~
-		\str_case_e:nnF~{#2}{
-			{backend}{6~}
-			{dev}{7~}
-			{gamedev}{4~}
-			}{6~}
-		\NexusLocalized{#1}
-		~10~
-		\str_case_e:nnF~{#1}{
-			{en}{Job~Positions} 
-			{es}{Posiciones~de~Trabajo}}
-			{[null]}
-		)~
-	~-~5~\GetYearsLocalized{#1}~-~\href{\c__npkg_httpsprefix_tl gabuscuv.dev/en/Resume}{\textit{\MoreInfoLocalized{#1}}
-	}
-	}
-	
+}{
+\str_case_e:nnF~{#2}{{full}{}}{
+(
+\str_case_e:nnF~{#2}{
+{gamedev}{2~}
+}{4~}
+\NexusLocalized{#1}
+~5~
+\str_case_e:nnF~{#1}{
+{en}{Companies~}
+	{es}{Compañias~}
+}{[null]}
+~-~
+\str_case_e:nnF~{#2}{
+{backend}{6~}
+	{dev}{7~}
+	{gamedev}{4~}
+}{6~}
+\NexusLocalized{#1}
+~10~
+\str_case_e:nnF~{#1}{
+{en}{Job~Positions}
+	{es}{Posiciones~de~Trabajo}}
+{[null]}
+)~
+~-~5~\GetYearsLocalized{#1}~-~\href{\c__npkg_httpsprefix_tl gabuscuv.dev/en/Resume}{\textit{\MoreInfoLocalized{#1}}
+}
+}
+}
+
 
 \begin{entrylist}
-\str_case_e:nnF~{#2}
-{
-	{gamedev}{\WorkExperience_abance{#1}{#2}
-	\WorkExperience_itixo{#1}{#2}}
-	{backend}{
-		\WorkExperience_ghenova{#1}{#2}
-		\WorkExperience_abance{#1}{#2}
-		\WorkExperience_itixo{#1}{#2}
-		\WorkExperience_knowledgemill{#1}{#2}
-		%\WorkExperience_viewnext{#1}{#2}
+	\str_case_e:nnF~{#2}
+	{
+	{gamedev}{
+			\WorkExperience_ghenova{#1}{#2}
+			\WorkExperience_abance{#1}{#2}
+			\WorkExperience_itixo{#1}{#2}
 		}
-	{webdev}{
-	\WorkExperience_abance{#1}{#2}
-	\WorkExperience_itixo{#1}{#2}
-	\WorkExperience_knowledgemill{#1}{#2}
-	%\WorkExperience_viewnext{#1}{#2}
-	}
-	{dev}{
-	\WorkExperience_ghenova{#1}{#2}
-	\WorkExperience_abance{#1}{#2}
-	\WorkExperience_itixo{#1}{#2}
-	\WorkExperience_knowledgemill{#1}{#2}
-	%\WorkExperience_viewnext{#1}{#2}
-	}
-}{[null]}%
+		{backend}{
+			\WorkExperience_ghenova{#1}{#2}
+			\WorkExperience_abance{#1}{#2}
+			\WorkExperience_itixo{#1}{#2}
+			\WorkExperience_knowledgemill{#1}{#2}
+			%\WorkExperience_viewnext{#1}{#2}
+		}
+		{webdev}{
+			\WorkExperience_abance{#1}{#2}
+			\WorkExperience_itixo{#1}{#2}
+			\WorkExperience_knowledgemill{#1}{#2}
+			%\WorkExperience_viewnext{#1}{#2}
+		}
+		{dev}{
+			\WorkExperience_ghenova{#1}{#2}
+			\WorkExperience_abance{#1}{#2}
+			\WorkExperience_itixo{#1}{#2}
+			\WorkExperience_knowledgemill{#1}{#2}
+			%\WorkExperience_viewnext{#1}{#2}
+		}
+		{full}{
+			\WorkExperience_ghenova{#1}{#2}
+			\WorkExperience_abance{#1}{#2}
+			\WorkExperience_itixo{#1}{#2}
+			\WorkExperience_knowledgemill{#1}{#2}
+			\WorkExperience_viewnext{#1}{#2}
+		}
+	}{[null]}%
 
 \end{entrylist}
 }
@@ -147,51 +159,70 @@
 \newcommand\Education[2]{
 \cvsect{\str_case_e:nnF~{#1}
 {
-	{en}{Education}
+{en}{Education}
 	{es}{Educacion}
 }{[null]}%]
 }{}
 
 \begin{entrylist}
 	\entry
-		{2015~--~2017\\\footnotesize{2~\GetYearsLocalized{#1}}}
-		{
-		\str_case_e:nnF~{#1}
-		{
-			{en}{[EQF5]~HND-Equivalent~Studies~in~Multi-Platform~Applications~Development}
-			{es}{[FPGS]~Técnico~Superior~en~Desarrollo~de~Aplicaciones~Multiplataformas}
-		}{[null]}%			
-		}
-		{I.E.S~Ágora,~Cáceres,~Spain~}
-		{
-		\str_case_e:nnF~{#1}
-			{
-				{en}{}
-				{es}{}
-			}{[null]}%
-			\texttt{Java}\slashsep\texttt{C\#~\&~.Net~Framework}\slashsep\texttt{Microsoft~SQL~Server}\slashsep\texttt{Android}
+	{2015~--~2017\\\footnotesize{2~\GetYearsLocalized{#1}}}
+	{
+	\str_case_e:nnF~{#1}
+	{
+	{en}{[EQF5]~HND-Equivalent~Studies~in~Multi-Platform~Applications~Development}
+		{es}{[FPGS]~Técnico~Superior~en~Desarrollo~de~Aplicaciones~Multiplataformas}
+	}{[null]}%			
+	}
+	{I.E.S~Ágora,~Cáceres,~Spain~}
+	{
+	\str_case_e:nnF~{#1}
+	{
+	{en}{}
+		{es}{}
+	}{[null]}%
+	\texttt{Java}\slashsep\texttt{C\#~\&~.Net~Framework}\slashsep\texttt{Microsoft~SQL~Server}\slashsep\texttt{Android}
 	}
 	\entry
-		{2012~--~2014\\\footnotesize{2~\GetYearsLocalized{#1}}}
-		{
-		\str_case_e:nnF~{#1}
-		{
-			{en}{[ISCED3]~Vocational~education~in~IT~Technician~Studies}
-			{es}{[FPGM]~Técnico~en~Sistemas~Microinformáticos~y~Redes}
-		}{[null]}%
-		}
-		{Educatec,~Cáceres,~Spain~}
-		{
-		\str_case_e:nnF~{#1}
-		{
-			{en}{}
-			{es}{}
-		}{[null]}%
-		\texttt{Cisco~IOS}\slashsep\texttt{Fedora~\&~Debian}\slashsep\texttt{Windows~Server}
-		}
+	{2012~--~2014\\\footnotesize{2~\GetYearsLocalized{#1}}}
+	{
+	\str_case_e:nnF~{#1}
+	{
+	{en}{[ISCED3]~Vocational~education~in~IT~Technician~Studies}
+		{es}{[FPGM]~Técnico~en~Sistemas~Microinformáticos~y~Redes}
+	}{[null]}%
+	}
+	{Educatec,~Cáceres,~Spain~}
+	{
+	\str_case_e:nnF~{#1}
+	{
+	{en}{}
+		{es}{}
+	}{[null]}%
+	\texttt{Cisco~IOS}\slashsep\texttt{Fedora~\&~Debian}\slashsep\texttt{Windows~Server}
+	}
 \end{entrylist}
+}{}
+
+\newcommand\Talks[2]{
+\cvsect{\str_case_e:nnF~{#1}
+{
+{en}{Talks}
+	{es}{Charlas}
+}{[null]}%
+}{
 }
+\begin{entrylist}
+	\str_case_e:nnF~{#2}
+	{
+	{frontend}{}
+	}{
+	\talks_AudioDesign{#1}{#2}
+	\talks_MotionCapture{#1}{#2}
+	}%
 
+\end{entrylist}
 
+}
 
 \ExplSyntaxOff
