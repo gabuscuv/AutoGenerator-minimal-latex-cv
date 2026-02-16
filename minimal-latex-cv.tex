@@ -152,7 +152,14 @@
 %----------------------------------------------------------------------------------------
 %	EDUCATION
 %----------------------------------------------------------------------------------------
+\ExplSyntaxOn
 
+\str_case_e:nnF~{\jobtype}
+{
+{dev}{\newpage}
+}
+{}
+\ExplSyntaxOff
 \Education{\langsa}{\jobtype}
 
 \Courses{\langsa}{\jobtype}

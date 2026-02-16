@@ -20,21 +20,21 @@
 {gamedev}{(6~\str_case_e:nnF~{#1}{{en}{of} {es}{de}}{[null]}~16~\str_case_e:nnF~{#1}{{en}{projects} {es}{proyectos}}{[null]})~}
 {dev}{(4~\str_case_e:nnF~{#1}{{en}{of} {es}{de}}{[null]}~16~\str_case_e:nnF~{#1}{{en}{projects} {es}{proyectos}}{[null]})~}
 }{(4~\str_case_e:nnF~{#1}{{en}{of} {es}{de}}{[null]}~16~\str_case_e:nnF~{#1}{{en}{projects} {es}{proyectos}}{[null]})~}%
-~-~8~\GetYearsLocalized{#1}~-~\href{\c__npkg_httpsprefix_tl gabuscuv.dev/en/Projects}{~\textit{\MoreInfoLocalized{#1}}}
+~-~8.97~\GetYearsLocalized{#1}~-~\href{\c__npkg_httpsprefix_tl gabuscuv.dev/en/Projects}{~\textit{\MoreInfoLocalized{#1}}}
 }
 
 \begin{entrylist}
 	% Post-VRProject
 	\str_case_e:nnF~{#2}
 	{
-	{dev}{
-			\project_webscrapper{#1}{#2}
-			%\project_Backlog{#1}{#2}
-		}
-		{gamedev}{\project_Gamejams{#1}{#2}
+
+		{gamedev}{
+			\project_nfccrossengine{#1}{#2}	
+			\project_Gamejams{#1}{#2}
 			%\project_webscrapper{#1}{#2}
 		}
 	}{
+	\project_nfccrossengine{#1}{#2}
 	\project_webscrapper{#1}{#2}
 	%\project_Backlog{#1}{#2}
 	}%
@@ -110,7 +110,7 @@
 	{es}{Posiciones~de~Trabajo}}
 {[null]}
 )~
-~-~5~\GetYearsLocalized{#1}~-~\href{\c__npkg_httpsprefix_tl gabuscuv.dev/en/Resume}{\textit{\MoreInfoLocalized{#1}}
+~-~5.30~\GetYearsLocalized{#1}~-~\href{\c__npkg_httpsprefix_tl gabuscuv.dev/en/Resume}{\textit{\MoreInfoLocalized{#1}}
 }
 }
 }

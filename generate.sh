@@ -33,7 +33,7 @@ do
         if [ "$NOCUTPAGES" -eq 1 ];then
             mv $NAMEFILE.pdf $PWD/output/`getResumeLocalized $LANG`-$NAME-$LANG-$JOBTYPE.pdf
         else
-            qpdf $NAMEFILE.pdf --pages . 1 -- $PWD/output/`getResumeLocalized $LANG`-$NAME-$LANG-$JOBTYPE.pdf
+            qpdf "$NAMEFILE.pdf" --pages . 1-2 -- "$PWD/output/$(getResumeLocalized "$LANG")-$NAME-$LANG-$JOBTYPE.pdf"
         fi
         
     done
