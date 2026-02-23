@@ -4,10 +4,18 @@
 \newcommand\GetTitleLocalized[2]{
 \str_case_e:nnF~{#2}
 {
+{gamedevtools}{
+\str_case_e:nnF~{#1}
+{
+	{en}{Tools~\&~Engine~Programmer}
+	{es}{Tools~\&~Engine~Programmer}
+}
+{[null]}%
+}
 {gamedev}{
 \str_case_e:nnF~{#1}
 {
-{en}{Game~Developer}
+	{en}{Game~Developer}
 	{es}{Game~Developer}
 }
 {[null]}%

@@ -26,7 +26,7 @@
 }{
 \\
 \str_case_e:nnF~{#1}{
-{en}{
+	{en}{
 		-~Development~of~real-time~visualization~and~monitoring~systems~for~naval~defense~projects.\\
 		-~Work~on~multi-source~video~pipelines~and~system-level~performance.\\
 		-~Work~on~Control~Terminal~Management~and~terminals~itself.
@@ -43,29 +43,57 @@
 }
 }
 
-\newcommand\WorkExperience_abance_vraba_full[2]{
-\str_case_e:nnF~{#1}
+\newcommand\WorkExperience_abance_vraba_full[2]
 {
-{es}
+	\str_case_e:nnF~{#2}
 	{
-		\textbf{Visualizador~VR~de~Buques~(2023--2024)}:\\
-		-~Desarrollo~y~optimización~de~un~visualizador~3D~en~realidad~virtual~con~Unreal~Engine~5.1~y~actualización~a~5.3.\\
-		-~Implementación~de~soporte~multiusuario~y~multijugador~(replicación).\\
-		-~Optimización~del~proceso~de~importación~de~assets,~reduciendo~el~tiempo~de~40~minutos~a~10~minutos.\\
-		-~Optimización~de~E/S,~reduciendo~tiempos~de~carga~de~10--15~minutos~a~unos~pocos~segundos.\\
-		-~Creación~de~herramientas~automatizadas~para~procesamiento~de~contenido~con~Qt.\\
-		-~Automatización~mediante~Python~(commandlets~y~herramientas~en~editor).\\
-		-~Desarrollo~de~herramientas~personalizadas~y~opciones~de~accesibilidad~con~soporte~multiusuario.
+		{gamedevtools}
+			{
+				\str_case_e:nnF~{#1}
+				{
+				{es}
+					{
+						\textbf{Visualizador~VR~de~Buques~(2023--2024)}:\\
+						-~Diseño~e~implementación~de~herramientas~personalizadas~del~editor~Unreal~para~automatizar~el~procesamiento~de~recursos.\\
+						-~Canales~de~importación~de~contenido~mejorados~(tiempo~de~carga~reducido~de~minutos~a~segundos).\\
+						-~Desarrollo~de~herramientas~internas~en~C\#~para~la~documentación~de~ingeniería~y~el~filtrado~de~flujos~de~trabajo.\\
+						-~Desarrollo~de~funciones~de~automatización~en~tiempo~de~ejecución~y~del~editor.
+					}
+					{en}
+					{
+						\textbf{Internal~VR~Tool~(2023--2024)}:\\
+						-~Designed~and~implemented~custom~Unreal~Editor~tools~to~automate~asset~processing\\
+						-~Improved~content~import~pipelines~(loading~time~reduced~from~minutes~to~seconds)\\
+						-~Built~internal~C\#~tooling~for~engineering~documentation~and~filtering~workflows\\
+						-~Developed~runtime~and~editor-side~automation~features
+					}
+				}{[null]}
+			}
 	}
-	{en}
 	{
-		\textbf{Internal~VR~Tool~(2023--2024)}:\\
-		-~Lead~developer~on~a~real-time~3D~ship~visualization~and~training~tool~using~Unreal~Engine~5.\\
-		-~Implemented~multi-user~networking,~simulation~features~and~VR~support.\\
-		-~Optimized~asset~import~and~IO~pipelines~(loading~times~reduced~from~minutes~to~seconds).\\
-		-~Built~custom~editor~and~runtime~tools~for~content~processing~and~automation.
+		\str_case_e:nnF~{#1}
+		{
+		{es}
+			{
+				\textbf{Visualizador~VR~de~Buques~(2023--2024)}:\\
+				-~Desarrollo~y~optimización~de~un~visualizador~3D~en~realidad~virtual~con~Unreal~Engine~5.1~y~actualización~a~5.3.\\
+				-~Implementación~de~soporte~multiusuario~y~multijugador~(replicación).\\
+				-~Optimización~del~proceso~de~importación~de~assets,~reduciendo~el~tiempo~de~40~minutos~a~10~minutos.\\
+				-~Optimización~de~E/S,~reduciendo~tiempos~de~carga~de~10--15~minutos~a~unos~pocos~segundos.\\
+				-~Creación~de~herramientas~automatizadas~para~procesamiento~de~contenido~con~Qt.\\
+				-~Automatización~mediante~Python~(commandlets~y~herramientas~en~editor).\\
+				-~Desarrollo~de~herramientas~personalizadas~y~opciones~de~accesibilidad~con~soporte~multiusuario.
+			}
+			{en}
+			{
+				\textbf{Internal~VR~Tool~(2023--2024)}:\\
+				-~Lead~developer~on~a~real-time~3D~ship~visualization~and~training~tool~using~Unreal~Engine~5.\\
+				-~Implemented~multi-user~networking,~simulation~features~and~VR~support.\\
+				-~Optimized~asset~import~and~IO~pipelines~(loading~times~reduced~from~minutes~to~seconds).\\
+				-~Built~custom~editor~and~runtime~tools~for~content~processing~and~automation.
+			}
+		}{[null]}
 	}
-}{[null]}
 }
 
 \newcommand\WorkExperience_abance_usv_full[2]{
@@ -127,6 +155,7 @@
 		\textbf{C++~Backend~Developer~(2024)}:~Development~of~Unmanned~Surface~Vehicle~Communications\\
 		\textbf{C\#~Tools~(2024)}:~Documentation/Filtering~Tools~for~Integrated~Logistics~Support~Engineering.
 	}
+	{gamedevtools}{\WorkExperience_abance_vraba_full{#1}{#2}}
 	{full}{
 		\textbf{Main~React/Next~JS/TypeScript~Developer~(2024)}:~CRUD~Database~For~Integrated~Logistics~Support~(ILS)\\
 		\textbf{Wordpress~Maintenance~(2024)}\\
@@ -182,7 +211,7 @@
 
 \newcommand\WorkExperience_itixo[2]{
 \entry
-{\DTMdisplaydate{2018}{02}{25}{-1}\\\DTMdisplaydate{2018}{06}{25}{-1}\\\footnotesize{2.30~\GetYearsLocalized{#1}}}
+{\DTMdisplaydate{2018}{02}{25}{-1}\\\DTMdisplaydate{2020}{06}{25}{-1}\\\footnotesize{2.30~\GetYearsLocalized{#1}}}
 {
 \str_case_e:nnF~{#1}
 {

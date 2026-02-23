@@ -4,7 +4,7 @@ NAME="BustilloDelCuvilloGabriel"
 
 NAMEFILE="minimal-latex-cv";
 LANGS=${CUSTOMLANG:-"en es"};
-JOBTYPES=${JOBTYPE:-"dev gamedev backend webdev embeddedsystem"};
+JOBTYPES=${JOBTYPE:-"dev gamedev backend webdev gamedevtools embeddedsystem"};
 NOCUTPAGES=${NOCUTPAGES:-0}
 
 getResumeLocalized()
