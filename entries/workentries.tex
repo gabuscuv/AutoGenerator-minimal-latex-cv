@@ -2,7 +2,7 @@
 
 \newcommand\WorkExperience_ghenova[2]{
 \entry
-{\DTMdisplaydate{2025}{02}{25}{-1}\\\OnGoingLocalized{#1} \\\footnotesize{0.97~\GetYearsLocalized{#1}}}
+{\DTMdisplaydate{2025}{02}{25}{-1}\\\OnGoingLocalized{#1} \\\footnotesize{1.00~\GetYearsLocalized{#1}}}
 {
 
 \str_case_e:nnF~{#1}
@@ -47,25 +47,30 @@
 {
 	\str_case_e:nnF~{#2}
 	{
-		{gamedevtools}
+
+				{gamedevtools}
 			{
 				\str_case_e:nnF~{#1}
 				{
 				{es}
 					{
-						\textbf{Visualizador~VR~de~Buques~(2023--2024)}:\\
-						-~Diseño~e~implementación~de~herramientas~personalizadas~del~editor~Unreal~para~automatizar~el~procesamiento~de~recursos.\\
-						-~Canales~de~importación~de~contenido~mejorados~(tiempo~de~carga~reducido~de~minutos~a~segundos).\\
-						-~Desarrollo~de~herramientas~internas~en~C\#~para~la~documentación~de~ingeniería~y~el~filtrado~de~flujos~de~trabajo.\\
-						-~Desarrollo~de~funciones~de~automatización~en~tiempo~de~ejecución~y~del~editor.
-					}
+						\textbf{Automatización~de~Unreal~Engine~y~desarrollo~de~flujos~de~desarrollo~(2023--2024)}:\\
+						-~Diseño~y~mantenimiento~de~canales~de~compilación~automatizados~para~Unreal~Engine~(compilaciones~desatendidas~de~cliente~y~servidor).\\
+						-~Implementación~de~sistemas~de~compilación~de~contenido~automatizados~con~soporte~de~red~mediante~herramientas~basadas~en~Qt.\\
+						-~Desarrollo~de~flujos~de~trabajo~de~automatización~en~Python~(commandlets~y~scripts~en~el~editor).\\
+						-~Optimización~de~los~canales~de~E/S~e~importación~de~recursos~(reducción~de~la~carga~de~escenas~de~10-15~minutos~a~segundos;~importación~completa~de~40~a~10~minutos).\\
+						-~Implementación~de~sistemas~de~replicación~multijugador/en~red~que~admiten~flujos~de~trabajo~multiusuario.\\
+						-~Desarrollo~de~herramientas~internas~para~mejorar~la~eficiencia~de~la~producción~y~reducir~la~intervención~manual.					
+						}
 					{en}
 					{
-						\textbf{Internal~VR~Tool~(2023--2024)}:\\
-						-~Designed~and~implemented~custom~Unreal~Editor~tools~to~automate~asset~processing\\
-						-~Improved~content~import~pipelines~(loading~time~reduced~from~minutes~to~seconds)\\
-						-~Built~internal~C\#~tooling~for~engineering~documentation~and~filtering~workflows\\
-						-~Developed~runtime~and~editor-side~automation~features
+						\textbf{Unreal~Engine~Automation~\&~Pipeline~Development~(2023--2024)}:\\
+						-~Designed~and~maintained~automated~build~pipelines~for~Unreal~Engine~(client~&~server~unattended~builds)
+						-~Implemented~network-supported~automated~content~build~systems~using~Qt-based~tooling
+						-~Developed~Python~automation~workflows~(Commandlets~&~in-editor~scripting)
+						-~Optimized~I/O~and~asset~import~pipelines~(reduced~scene~load~from~10–15~minutes~to~seconds;~full~import~from~40~to~10~minutes)
+						-~Implemented~multiplayer/network~replication~systems~supporting~multi-user~workflows
+						-~Built~internal~tools~to~improve~production~efficiency~and~reduce~manual~intervention
 					}
 				}{[null]}
 			}
@@ -87,7 +92,7 @@
 			{en}
 			{
 				\textbf{Internal~VR~Tool~(2023--2024)}:\\
-				-~Lead~developer~on~a~real-time~3D~ship~visualization~and~training~tool~using~Unreal~Engine~5.\\
+				-~Main~developer~on~a~real-time~3D~ship~visualization~and~training~tool~using~Unreal~Engine~5.\\
 				-~Implemented~multi-user~networking,~simulation~features~and~VR~support.\\
 				-~Optimized~asset~import~and~IO~pipelines~(loading~times~reduced~from~minutes~to~seconds).\\
 				-~Built~custom~editor~and~runtime~tools~for~content~processing~and~automation.
@@ -177,10 +182,16 @@
 {es}{
 \str_case_e:nnF~{#2}
 {
-{gamedev}{
+	{gamedev}{
+		\WorkExperience_abance_vraba_full{#1}{#2} \\
+		\textbf{C++~Backend~Developer~(2024)}:~Development~of~Unmanned~Surface~Vehicle~Communications\\
+		\textbf{C\#~Tools~(2024)}:~Documentation/Filtering~Tools~for~Integrated~Logistics~Support~Engineering.
+	}
+	{gamedevtools}
+	{
 		\WorkExperience_abance_vraba_full{#1}{#2}\\
-		\WorkExperience_abance_usv_full{#1}{#2}\\
-		\textbf{C\#~Tools~Developer~(2024)}:~Desarrollo~de~Herramientas~de~filtraje/documentación.
+		\textbf{C++~Backend~Developer~(2024)}~Desarrollo~en~Comunicaciones~y~despliegue~de~Vehiculos~no~tripulados~(Navantia~-~USV-ePark)\\
+		\textbf{C\#~Tools~(2024)}:~Herramientas~de~Documentacion/Filtraje~para~ILS~(Integrated~Logistics~Support).
 	}
 	{full}{
 		\WorkExperience_abance_usv_full{#1}{#2}\\
@@ -197,8 +208,10 @@
 \textbf{Visor~de~Buques~VR~(2023-2024)}:~Desarrollo~y~optimizacion~hecho~con~Unreal~Engine~5.3.
 }%
 }
-}{		\textbf{Herramienta~de~filtraje/documentación~(2024)}:Desarrollo~de~Excel~Parsers~(OpenXML)~\&~HTML~Scrapper/Converter~a~formato~S1000D,~Consultor~de~ecosistema~.NET~(arquitectura~migración),~Convertidor~Automatizado~Multimedia~Multiproceso. \\
-}%
+}
+{
+	\textbf{Herramienta~de~filtraje/documentación~(2024)}:Desarrollo~de~Excel~Parsers~(OpenXML)~\&~HTML~Scrapper/Converter~a~formato~S1000D,~Consultor~de~ecosistema~.NET~(arquitectura~migración),~Convertidor~Automatizado~Multimedia~Multiproceso. \\
+}
 \\
 \str_case_e:nnF~{#2}{
 {gamedev}{\texttt{Unreal~Engine~5}\slashsep\texttt{C++17~\&~Blueprints}\slashsep\texttt{C\#~\&~.NET}\slashsep\texttt{QT}\slashsep\texttt{MySQL}\slashsep\texttt{GRPC}}
