@@ -2,7 +2,7 @@
 
 \newcommand\WorkExperience_ghenova[2]{
 \entry
-{\DTMdisplaydate{2025}{02}{25}{-1}\\\OnGoingLocalized{#1} \\\footnotesize{1.00~\GetYearsLocalized{#1}}}
+{\DTMdisplaydate{2025}{02}{25}{-1}\\\OnGoingLocalized{#1} \\\footnotesize{1.07~\GetYearsLocalized{#1}}}
 {
 
 \str_case_e:nnF~{#1}
@@ -48,7 +48,7 @@
 	\str_case_e:nnF~{#2}
 	{
 
-				{gamedevtools}
+			{gamedevtools}
 			{
 				\str_case_e:nnF~{#1}
 				{
@@ -91,11 +91,14 @@
 			}
 			{en}
 			{
-				\textbf{Internal~VR~Tool~(2023--2024)}:\\
-				-~Main~developer~on~a~real-time~3D~ship~visualization~and~training~tool~using~Unreal~Engine~5.\\
-				-~Implemented~multi-user~networking,~simulation~features~and~VR~support.\\
-				-~Optimized~asset~import~and~IO~pipelines~(loading~times~reduced~from~minutes~to~seconds).\\
-				-~Built~custom~editor~and~runtime~tools~for~content~processing~and~automation.
+				\textbf{Ship~VR~Viewer~(2023--2024)}:\\
+						-~Designed~and~maintained~automated~build~pipelines~for~Unreal~Engine~(client~\&~server~unattended~builds)\\
+						-~Implemented~network-supported~automated~content~build~systems~using~Qt-based~tooling\\
+						-~Developed~Python~automation~workflows~(Commandlets~\&~in-editor~scripting)\\
+						-~Optimized~I/O~and~asset~import~pipelines~(reduced~scene~load~from~10–15~minutes~to~seconds;~full~import~from~40~to~10~minutes)\\
+						-~Implemented~multiplayer/network~replication~systems~supporting~multi-user~workflows\\
+						-~Built~internal~tools~to~improve~production~efficiency~and~reduce~manual~intervention \\
+						-~Development~of~custom~tools~and~accessibility~options~with~multi-user~support.
 			}
 		}{[null]}
 	}
