@@ -1,5 +1,50 @@
 \ExplSyntaxOn
 
+\newcommand\project_rosettedisplay[2]{
+\entry
+{2026}
+{
+\href{\c__npkg_httpsprefix_tl github.com/gabuscuv/RosetteDisplay-ESP32_S3}{
+    \color{blue}\underline{RosetteDisplay~ESP32-S3}
+}
+}
+{}
+{
+\str_case_e:nnF~{#1}
+{
+    {en}{
+        A~lightweight~and~high-performance~display~framework~for~ESP32-S3,~
+        designed~for~smooth~MJPEG~playback,~double~buffering,~and~optimized~
+        rendering~on~round~Waveshare~panels.
+    }
+    {es}{
+        Un~framework~ligero~y~de~alto~rendimiento~para~ESP32-S3,~
+        diseñado~para~reproducción~fluida~de~MJPEG,~doble~buffering~y~
+        renderizado~optimizado~en~pantallas~circulares~de~Waveshare.
+    }
+}{[null]}%
+\str_case_e:nnF~{#2}
+{
+    {dev}{
+        \str_case_e:nnF~{#1}
+        {
+            {en}{\\Includes~a~custom~MJPEG~container~format,~PSRAM~buffering,~and~a~clean~C~API~for~embedded~projects.}
+            {es}{\\Incluye~un~contenedor~MJPEG~propio,~buffering~en~PSRAM~y~una~API~C~limpia~para~proyectos~embebidos.}
+        }{[null]}%
+    }
+    {gamedev}{
+        \str_case_e:nnF~{#1}
+        {
+            {en}{\\Adaptable~for~game~UI,~animated~assets,~and~low-power~visual~effects~on~microcontrollers.}
+            {es}{\\Adaptable~para~UI~de~juegos,~assets~animados~y~efectos~visuales~de~bajo~consumo~en~microcontroladores.}
+        }{[null]}%
+    }
+}{}
+\\
+~\texttt{ESP32-S3}\slashsep\texttt{ESP-IDF}\slashsep\texttt{C}\slashsep\texttt{FreeRTOS}\slashsep\texttt{MJPEG}\slashsep\texttt{PSRAM}
+}
+}
+
 \newcommand\project_webscrapper[2]{
 \entry
 {2023}
